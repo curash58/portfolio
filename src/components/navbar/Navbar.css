@@ -1,0 +1,59 @@
+/* General Navbar styling */
+.custom-navbar {
+    background-color: #000; /* Black background for dark mode */
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Brand styling */
+  .navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+    text-decoration: none;
+  }
+  
+  .navbar-brand .subtitle {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.7); /* Dimmed white for subtitle */
+    margin-top: -5px;
+  }
+  
+  /* Slider button styles */
+  .slider-links {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .slider-button {
+    border: none;
+    border-radius: 20px; /* Rounded edges for slider buttons */
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .slider-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+  
+  /* Icon button styling */
+  .navbar-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon-button {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .icon-button:hover {
+    color: #ffcc00; /* Yellow highlight on hover */
+  }

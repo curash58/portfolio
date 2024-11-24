@@ -1,0 +1,59 @@
+/* Wrapper for the pill navigation */
+.nav-pill {
+    position: relative;
+    width: 200px; /* Adjust the width as per design */
+    height: 50px; /* Adjust height as per design */
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border-radius: 25px; /* Fully rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 5px;
+  }
+  
+  /* Toggle buttons container */
+  .nav-toggle-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Individual toggle button */
+  .nav-toggle {
+    z-index: 1; /* Keep above the indicator */
+    width: 50%; /* Each button takes half of the pill */
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7); /* Dimmed white */
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-toggle:hover {
+    color: #ffffff; /* Brighter white on hover */
+  }
+  
+  /* Active button styling */
+  .nav-toggle.active {
+    color: #ffffff; /* Brighter white for active state */
+    font-weight: bold;
+  }
+  
+  /* Sliding indicator */
+  .nav-indicator-pill {
+    position: absolute;
+    width: 50%; /* Same width as a button */
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light background for indicator */
+    border-radius: 25px; /* Fully rounded */
+    transition: transform 0.3s ease; /* Smooth transition */
+    pointer-events: none; /* Prevent clicking on the indicator */
+    z-index: 0; /* Behind the text */
+  }

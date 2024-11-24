@@ -1,0 +1,89 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* Fade-in effect for the app */
+  .app-container {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+  
+  /* Smooth fade-in animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Navbar custom styles */
+  .custom-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s;
+  }
+  
+  .custom-navbar .nav-link:hover {
+    color: #ffcc00;
+  }
+  
+  /* Main text glowing effect */
+  .main-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6),
+      0 0 45px rgba(255, 255, 255, 0.4);
+  }
+  
+  .main-text span {
+    color: #ffcc00;
+    text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00, 0 0 60px #ffcc00;
+  }
+  
+  /* Subtext styling */
+  .sub-text {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+  }
+  
+  /* Down arrow animation */
+  .down-arrow {
+    display: block;
+    margin: 30px auto;
+    font-size: 2rem;
+    color: #fff;
+    opacity: 0.8;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+  
+  /* Footer link styles */
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-link:hover {
+    color: #ffcc00;
+  }
