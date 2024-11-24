@@ -1,107 +1,41 @@
-/* Wrapper for spacing adjustments */
+/* Main wrapper for text and tree */
 .main-text-wrapper {
-    margin-top: 80px; /* Add space between navbar and hero section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 150px); /* Center vertically, leaving space for footer */
+  display: flex;
+  justify-content: space-between; /* Text on the left, tree on the right */
+  align-items: center;
+  margin-top: 50px; /* Space above the section */
+  min-height: calc(100vh - 200px); /* Full viewport height minus margins */
+  padding: 0 60px; /* Add horizontal padding */
+  flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+}
+
+/* Left section for text */
+.main-text-left {
+  flex: 1; /* Take 1 portion of available space */
+  max-width: 600px; /* Constrain width */
+}
+
+/* Right section for tree */
+.main-text-right {
+  flex: 1; /* Take remaining space */
+  display: flex;
+  justify-content: center; /* Center the canvas horizontally */
+  align-items: center; /* Center the canvas vertically */
+  height: 100%;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .main-text-wrapper {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 0 15px; /* Reduce padding for smaller screens */
   }
-  
-  /* Frame container */
-  .window-frame {
-    background: #000; /* Dark background */
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Soft shadow for frame */
-    overflow: hidden;
-    max-width: 900px;
-    margin: auto;
+
+  .main-text-left {
+    margin-bottom: 20px; /* Add space between text and tree */
   }
-  
-  /* Window bar (with dots) */
-  .window-bar {
-    background: #2f2f2f; /* Darker bar at the top */
-    padding: 10px 15px;
-    display: flex;
-    align-items: center;
+
+  .main-text-right {
+    width: 100%; /* Full width for the tree */
   }
-  
-  .window-dots {
-    display: flex;
-    gap: 8px; /* Space between dots */
-  }
-  
-  .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  
-  .dot.red {
-    background: #ff605c;
-  }
-  
-  .dot.yellow {
-    background: #ffbd44;
-  }
-  
-  .dot.green {
-    background: #00ca4e;
-  }
-  
-  /* Main content within the frame */
-  .main-text-content {
-    padding: 40px;
-  }
-  
-  /* Main Heading */
-  .main-text {
-    font-size: 3rem; /* Large text size */
-    font-weight: bold;
-    color: #fff; /* White text */
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 
-                 0 0 30px rgba(255, 255, 255, 0.6), 
-                 0 0 45px rgba(255, 255, 255, 0.4); /* Glowing effect */
-    margin-bottom: 20px;
-    line-height: 1.2;
-  }
-  
-  .main-text .highlight {
-    color: #ffcc00; /* Bright yellow for highlight */
-    text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00, 0 0 60px rgba(255, 204, 0, 0.8);
-  }
-  
-  .main-text .highlight-serif {
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.8); /* Dimmed white for serif text */
-  }
-  
-  /* Subtext Styling */
-  .sub-text {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.8); /* Slightly dimmed white */
-    margin-top: 20px;
-  }
-  
-  .sub-text .sub-text-formerly {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.6); /* Even dimmer white for contrast */
-  }
-  
-  /* Down Arrow */
-  .down-arrow {
-    display: block;
-    margin: 30px auto 0;
-    font-size: 2rem;
-    color: rgba(255, 255, 255, 0.8);
-    animation: bounce 2s infinite; /* Add bounce animation */
-  }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(10px);
-    }
-  }
+}

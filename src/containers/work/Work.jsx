@@ -6,6 +6,11 @@ const Work = () => {
     <>
       <MainText />
       <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </>
   );
 };

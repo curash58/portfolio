@@ -3,7 +3,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Work, Info } from "./containers";
-import { Preloader, Card, Navbar, Footer, MainText } from "./components/";
+import {
+  Preloader,
+  Navbar,
+  Footer,
+} from "./components/";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -18,7 +22,9 @@ const App = () => {
   return (
     <div>
       {loading ? (
-        <Preloader />
+        <>
+          <Preloader />
+        </>
       ) : (
         <div className="app-container">
           <Router>
