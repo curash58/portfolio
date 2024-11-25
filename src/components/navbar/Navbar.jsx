@@ -24,7 +24,7 @@ const CustomNavbar = () => {
             href="https://www.linkedin.com/in/arsen-valeev-aa92442ba/"
             target="_blank"
             rel="noopener noreferrer"
-            className="icon-button"
+            className="icon-button linkedin"
           >
             <FaLinkedin size={20} />
           </a>

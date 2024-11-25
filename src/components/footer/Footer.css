@@ -1,0 +1,49 @@
+/* Footer.css */
+.custom-footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent effect */
+    backdrop-filter: blur(10px); /* Glass-like effect */
+    padding: 20px 0;
+    margin-top: 40px;
+    font-family: "Arial", sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  }
+  
+  .footer-section {
+    margin-bottom: 10px;
+  }
+  
+  .footer-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  
+  .footer-icon:hover {
+    color: #ffcc00;
+  }
+
+  .footer-icon.linkedin:hover {
+    color: #0a66c2;
+  }
+
+  .footer-icon {
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-icon:hover {
+    color: #ffcc00;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-section {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
