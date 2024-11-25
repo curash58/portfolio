@@ -4,7 +4,7 @@
   justify-content: space-between; /* Text on the left, tree on the right */
   align-items: center;
   margin-top: 50px; /* Space above the section */
-  min-height: calc(100vh - 200px); /* Full viewport height minus margins */
+  min-height: calc(100vh - 150px); /* Full viewport height minus margins */
   padding: 0 60px; /* Add horizontal padding */
   flex-wrap: wrap; /* Allows content to wrap on smaller screens */
 }

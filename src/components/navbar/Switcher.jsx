@@ -4,14 +4,14 @@ import "./Switcher.css";
 
 const Switcher = () => {
   const location = useLocation(); // Get current location
-  const active = location.pathname === "/work" ? "Work" : "Info"; // Determine active page
+  const active = location.pathname === "/" ? "Work" : "Info"; // Determine active page
 
   return (
     <div className="nav-pill">
       <div className="nav-toggle-container">
         {/* Work Link */}
         <Link
-          to="/work"
+          to="/"
           className={`nav-toggle ${active === "Work" ? "active" : ""}`}
         >
           <div className="text-nav-toggle">Work</div>

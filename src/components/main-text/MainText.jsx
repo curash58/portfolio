@@ -9,13 +9,14 @@ const MainText = () => {
       {/* Text content */}
       <div className="main-text-left">
         <h1 className="main-text">
-          I craft <span className="highlight">products</span>, <br />
-          interactions & <span className="highlight-serif">stories</span>.
+        
+          Hello there, {/* <span className="highlight">products</span> */}I'm web-developer, <br />
+          and I love what I make.
         </h1>
         <p className="sub-text">
-          Designer at Discord. Based in Toronto. <br />
+          Student 3 Semestr at Humber Polythecnic. Toronto ON. <br />
           <span className="sub-text-formerly">
-            Formerly at Google and RBC.
+            Peer tutor at Humber Polythecnic.
           </span>
         </p>
       </div>

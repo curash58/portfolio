@@ -30,9 +30,8 @@ const App = () => {
           <Router>
             <Navbar />
             <Routes>
-              <Route path="/work" element={<Work />} />
+              <Route path="/" element={<Work />} />
               <Route path="/info" element={<Info />} />
-              <Route path="/" element={<Work />} /> {/* Default route */}
             </Routes>
             <Footer />
           </Router>

@@ -1,0 +1,8 @@
+/* Work Cards Grid */
+.work-cards {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 40px; /* Space between cards */
+    margin: 40px auto;
+    max-width: 1200px; /* Restrict max width */
+  }
