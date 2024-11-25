@@ -1,59 +1,78 @@
 /* General Navbar styling */
 .custom-navbar {
-    background-color: #000; /* Black background for dark mode */
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
-    font-family: "Arial", sans-serif;
-  }
-  
-  /* Brand styling */
-  .navbar-brand {
-    color: #fff;
-    font-size: 1.5rem;
-    /* font-weight: bold; */
-    text-decoration: none;
-  }
-  
-  .navbar-brand .subtitle {
-    font-size: 0.9rem;
-    font-weight: normal;
-    color: rgba(255, 255, 255, 0.7); /* Dimmed white for subtitle */
-    margin-top: -5px;
-  }
-  
-  /* Slider button styles */
-  .slider-links {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .slider-button {
-    border: none;
-    border-radius: 20px; /* Rounded edges for slider buttons */
-    padding: 5px 15px;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.9);
-    background: rgba(255, 255, 255, 0.1); /* Transparent background */
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .slider-button:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-  }
-  
-  /* Icon button styling */
+  position: sticky; /* Keeps the navbar at the top */
+  top: 0; /* Sticks it to the top */
+  z-index: 10; /* Ensures it stays on top of other elements */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Adds a blurred glass effect */
+  padding: 5px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border at the bottom */
+  font-family: "Arial", sans-serif;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transitions */
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.navbar-brand .subtitle {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.7); /* Dimmed white for subtitle */
+  margin-top: -5px;
+}
+
+/* Links and buttons */
+.slider-links {
+  display: flex;
+  gap: 10px;
+}
+
+.slider-button {
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.1); /* Transparent background */
+  transition: all 0.3s ease-in-out;
+}
+
+.slider-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.icon-button {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.icon-button:hover {
+  color: #ffcc00; /* Yellow highlight on hover */
+}
+/* Centering the Switcher component */
+.custom-navbar .switcher-container {
+  flex: 1; /* Takes the available space */
+  display: flex;
+  justify-content: center; /* Centers the Switcher horizontally */
+}
+
+/* Navbar icons adjustments */
+.navbar-icons {
+  margin-left: 80px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+
+@media (max-width: 768px) {
   .navbar-icons {
-    display: flex;
-    gap: 15px;
+    margin-left: 0px;
   }
-  
-  .icon-button {
-    color: rgba(255, 255, 255, 0.9);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .icon-button:hover {
-    color: #ffcc00; /* Yellow highlight on hover */
-  }
+}

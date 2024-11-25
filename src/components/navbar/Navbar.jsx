@@ -7,13 +7,16 @@ import "./Navbar.css";
 const CustomNavbar = () => {
   return (
     <Navbar className="custom-navbar" expand="lg" variant="dark">
-      <Container>
+      <Container className="d-flex align-items-center">
+        {/* Left-side brand */}
         <Navbar.Brand href="#" className="navbar-brand d-none d-lg-block">
           Arsen Valeev
         </Navbar.Brand>
 
-        {/* Switcher for Work and Info */}
-        <Switcher />
+        {/* Center Switcher */}
+        <div className="switcher-container">
+          <Switcher />
+        </div>
 
         {/* Right-side icons */}
         <div className="navbar-icons">
@@ -40,4 +43,3 @@ const CustomNavbar = () => {
 };
 
 export default CustomNavbar;
-

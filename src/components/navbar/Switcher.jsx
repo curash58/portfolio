@@ -24,7 +24,7 @@ const Switcher = () => {
         >
           <div className="text-nav-toggle">Info</div>
         </Link>
-
+        
         {/* Sliding Indicator */}
         <div
           className="nav-indicator-pill"
