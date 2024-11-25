@@ -14,6 +14,41 @@ const Work = () => {
       description: "Evolving the Genie app design language",
       image: "/images/1.png",
     },
+    {
+      title: "Genie",
+      description: "Evolving the Genie app design language",
+      image: "/images/1.png",
+    },
+    {
+      title: "Genie",
+      description: "Evolving the Genie app design language",
+      image: "/images/1.png",
+    },
+    {
+      title: "Genie",
+      description: "Evolving the Genie app design language",
+      image: "/images/1.png",
+    },
+    {
+      title: "Genie",
+      description: "Evolving the Genie app design language",
+      image: "/images/1.png",
+    },
+    {
+      title: "Genie",
+      description: "Evolving the Genie app design language",
+      image: "/images/1.png",
+    },
+    {
+      title: "Genie",
+      description: "Evolving the Genie app design language",
+      image: "/images/1.png",
+    },
+    {
+      title: "Genie",
+      description: "Evolving the Genie app design language",
+      image: "/images/1.png",
+    },
   ];
 
   return (

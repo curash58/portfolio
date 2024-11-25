@@ -31,7 +31,7 @@ const Card = ({ title, description, image }) => {
         const contentWidth = parseFloat(computedStyle.width);
   
         console.log(contentWidth-120); // Debugging: log the width without padding
-        setCardWidth(`${contentWidth-120}px`); // Set the width dynamically
+        setCardWidth(`${(contentWidth-120)/2}px`); // Set the width dynamically
       }
     };
   
@@ -48,12 +48,12 @@ const Card = ({ title, description, image }) => {
     <div className="card-container" style={{ width: cardWidth }}>
       {/* Card content */}
       <div className="card-content" onClick={handleOpen}>
-        <div className="card-image">
-          <img src={image} alt={title} className="img-fluid" />
-        </div>
+        
         <div className="card-text">
           <h3 className="card-title">{title}</h3>
           <p className="card-description">{description}</p>
+        </div><div className="card-image">
+          <img src={image} alt={title} className="img-fluid" />
         </div>
       </div>
 
