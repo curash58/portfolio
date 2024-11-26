@@ -6,13 +6,21 @@ const Work = () => {
   const cardsData = [
     {
       title: "Cargo",
-      description: "Developed website for Cargo company implementing Admin panel",
-      imageUrls: ["/images/1.png", "/images/1.png", "/images/1.png","/images/1.png","/images/1.png"],
+      description:
+        "Developed website for Cargo company implementing Admin panel",
+      imageUrls: [
+        "/images/1.png",
+        "/images/1.png",
+        "/images/1.png",
+        "/images/1.png",
+        "/images/1.png",
+      ],
       projectLink: "https://ph.poliiiiiiiiina.crabdance.com",
     },
     {
       title: "Nexus",
-      description: "Developed website for Cargo company implementing Admin panel",
+      description:
+        "Developed website for Cargo company implementing Admin panel",
       imageUrls: ["/images/1.png", "/images/1.png", "/images/1.png"],
     },
     {
