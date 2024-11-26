@@ -1,17 +1,34 @@
 // Footer.jsx
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+
   return (
     <footer className="custom-footer">
       <Container>
         <Row className="justify-content-between align-items-center">
-          <Col xs={12} md={4} className="footer-section">
-            <p>&copy; 2024 Arsen Valeev. All Rights Reserved.</p>
-            <p>🤍 Made with love and cup of tea.</p>
+        <Col xs={12} md={4} className="footer-section d-flex align-items-center">
+            <div>
+              <p>&copy; 2024 Arsen Valeev. All Rights Reserved.</p>
+              <div className="d-flex align-items-center">
+                <p className="me-3">🤍 Made with love and cup of tea.</p>
+                <Button
+                  variant="outline-light"
+                  size="sm"
+                  onClick={scrollToTop}
+                  className="mb-3"
+                >
+                  Up
+                </Button>
+              </div>
+            </div>
           </Col>
           {/* <Col xs={12} md={4} className="footer-section text-center">
             <p>

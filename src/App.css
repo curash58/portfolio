@@ -8,6 +8,7 @@ body {
     overflow-x: hidden;
   }
   
+
   /* Fade-in effect for the app */
   .app-container {
     opacity: 0;
