@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Modal, Carousel } from "react-bootstrap";
 import "./Card.css";
-import { Modal } from "react-bootstrap";
 
-const Card = ({ title, description, image }) => {
+const Card = ({ title, description, imageUrls, projectLink }) => {
+
+  console.log(projectLink)
   // State for the dynamic width of the card
   const [cardWidth, setCardWidth] = useState("auto");
 
@@ -21,39 +23,34 @@ const Card = ({ title, description, image }) => {
 
   useEffect(() => {
     const updateCardWidth = () => {
-      // Find the target element to calculate its content width
-      const targetElement = document.querySelector('.main-text-wrapper.container');
+      const targetElement = document.querySelector(
+        ".main-text-wrapper.container"
+      );
       if (targetElement) {
-        // Get the computed styles of the element
         const computedStyle = getComputedStyle(targetElement);
-  
-        // Extract the content width (without padding)
         const contentWidth = parseFloat(computedStyle.width);
-  
-        console.log(contentWidth-120); // Debugging: log the width without padding
-        setCardWidth(`${(contentWidth-120)/2}px`); // Set the width dynamically
+        setCardWidth(`${(contentWidth - 120) / 2}px`);
       }
     };
-  
 
     updateCardWidth(); // Set initial width on mount
-    window.addEventListener("resize", updateCardWidth); // Update width on window resize
+    window.addEventListener("resize", updateCardWidth);
 
     return () => {
-      window.removeEventListener("resize", updateCardWidth); // Cleanup event listener on unmount
+      window.removeEventListener("resize", updateCardWidth);
     };
-  }, []); // Run only once on component mount/unmount
+  }, []);
 
   return (
     <div className="card-container" style={{ width: cardWidth }}>
       {/* Card content */}
       <div className="card-content" onClick={handleOpen}>
-        
         <div className="card-text">
           <h3 className="card-title">{title}</h3>
-          <p className="card-description">{description}</p>
-        </div><div className="card-image">
-          <img src={image} alt={title} className="img-fluid" />
+          <p className="card-description text-truncate">{description}</p>
+        </div>
+        <div className="card-image">
+          <img src={imageUrls[0]} alt={title} className="img-fluid" />
         </div>
       </div>
 
@@ -64,18 +61,57 @@ const Card = ({ title, description, image }) => {
         centered
         className="custom-modal"
       >
-        <Modal.Header closeButton>
-          <Modal.Title>{title}</Modal.Title>
-        </Modal.Header>
         <Modal.Body>
-          <img src={image} alt={title} className="img-fluid mb-3" />
-          <p>{description}</p>
+          <div className="d-flex align-items-center">
+            {/* Left side: Carousel */}
+            <div className="modal-carousel-container me-lg-3">
+              <Carousel>
+                {imageUrls.map((url, index) => (
+                  <Carousel.Item key={index}>
+                    <img
+                      src={url}
+                      alt={`Slide ${index}`}
+                      className="d-block w-100"
+                      style={{
+                        borderRadius: "12px",
+                        maxHeight: "500px",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </Carousel.Item>
+                ))}
+              </Carousel>
+            </div>
+
+            <div className="d-flex flex-column">
+              {/* Right side: Text */}
+              <div
+                className="modal-text-container"
+                style={{ overflowY: "auto", maxHeight: "400px" }}
+              >
+                <h3>{title}{" "}
+                {projectLink && (
+                  <a
+                  // добавить сюда иконки глаз анимированных смотрящих на ссылку типо глянь проект или как то так
+                    href={projectLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                    style={{ fontSize: "0.9rem", marginLeft: "10px", color: "white" }}
+                  >
+                    (View Project)
+                  </a>
+                )}</h3>
+                <p>{description}</p>
+              </div>
+              <div className="text-center mt-3">
+                <button className="btn btn-outline-light" onClick={handleClose}>
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
         </Modal.Body>
-        <Modal.Footer>
-          <button className="btn btn-outline-light" onClick={handleClose}>
-            Close
-          </button>
-        </Modal.Footer>
       </Modal>
     </div>
   );

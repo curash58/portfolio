@@ -5,52 +5,37 @@ import { Card, MainText } from "../../components";
 const Work = () => {
   const cardsData = [
     {
+      title: "Cargo",
+      description: "Developed website for Cargo company implementing Admin panel",
+      imageUrls: ["/images/1.png", "/images/1.png", "/images/1.png","/images/1.png","/images/1.png"],
+      projectLink: "https://ph.poliiiiiiiiina.crabdance.com",
+    },
+    {
+      title: "Nexus",
+      description: "Developed website for Cargo company implementing Admin panel",
+      imageUrls: ["/images/1.png", "/images/1.png", "/images/1.png"],
+    },
+    {
       title: "Nexus",
       description: "Designing the Nexus app",
-      image: "/images/1.png",
+      imageUrls: ["/images/1.png", "/images/1.png"],
     },
     {
-      title: "Genie",
-      description: "Evolving the Genie app design language",
-      image: "/images/1.png",
+      title: "Nexus",
+      description: "Designing the Nexus app",
+      imageUrls: ["/images/1.png", "/images/1.png"],
     },
     {
-      title: "Genie",
-      description: "Evolving the Genie app design language",
-      image: "/images/1.png",
+      title: "Nexus",
+      description: "Designing the Nexus app",
+      imageUrls: ["/images/1.png", "/images/1.png"],
     },
     {
-      title: "Genie",
-      description: "Evolving the Genie app design language",
-      image: "/images/1.png",
-    },
-    {
-      title: "Genie",
-      description: "Evolving the Genie app design language",
-      image: "/images/1.png",
-    },
-    {
-      title: "Genie",
-      description: "Evolving the Genie app design language",
-      image: "/images/1.png",
-    },
-    {
-      title: "Genie",
-      description: "Evolving the Genie app design language",
-      image: "/images/1.png",
-    },
-    {
-      title: "Genie",
-      description: "Evolving the Genie app design language",
-      image: "/images/1.png",
-    },
-    {
-      title: "Genie",
-      description: "Evolving the Genie app design language",
-      image: "/images/1.png",
+      title: "Nexus",
+      description: "Designing the Nexus app",
+      imageUrls: ["/images/1.png", "/images/1.png"],
     },
   ];
-
   return (
     <div>
       <MainText />
@@ -60,7 +45,8 @@ const Work = () => {
             key={index}
             title={card.title}
             description={card.description}
-            image={card.image}
+            imageUrls={card.imageUrls}
+            projectLink={card.projectLink}
           />
         ))}
       </div>

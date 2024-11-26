@@ -14,7 +14,7 @@ const MainText = () => {
           and I love what I make.
         </h1>
         <p className="sub-text">
-          Student 3 Semestr at Humber Polythecnic. Toronto ON. <br />
+          Student at Humber Polythecnic. Toronto ON. <br />
           <span className="sub-text-formerly">
             Peer tutor at Humber Polythecnic.
           </span>

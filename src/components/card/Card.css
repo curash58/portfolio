@@ -50,31 +50,96 @@
   margin: 0 0 0 10px;
 }
 
-/* Modal Customization */
-.custom-modal .modal-content {
-  background-color: #121212;
-  color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
-}
-
-.custom-modal .modal-header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.custom-modal .modal-title {
-  font-size: 1.8rem; /* Larger title for modal */
-  color: #fff;
-}
-
-.custom-modal .modal-body img {
-  border-radius: 12px;
-  max-height: 400px; /* Increase modal image height */
-  object-fit: cover;
-}
-
 @media (max-width: 1000px) {
   .card-container {
     width: 90% !important;
   }
+}
+
+/* Modal Customization */
+.custom-modal .modal-content {
+  background-color: #121212; /* Dark background for modal */
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+  max-width: 1200px !important; /* Limit modal width on larger screens */
+  margin: auto; /* Center the modal horizontally */
+}
+
+.custom-modal .modal-body {
+  display: flex; /* Flexbox layout for image and text */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  gap: 20px; /* Spacing between the image and text */
+}
+
+.modal-carousel-container {
+  width: 75%;
+}
+.custom-modal .modal-body img {
+  border-radius: 12px;
+  max-height: 500px; /* Increased height for larger images */
+  object-fit: cover;
+  flex: 1; /* Image takes up equal space */
+}
+
+.custom-modal .modal-body .modal-text-container {
+  flex: 1; /* Text takes up equal space */
+  align-self: flex-start;
+  text-align: left;
+}
+
+.custom-modal .modal-title {
+  font-size: 2rem; /* Larger title font size */
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.modal-dialog {
+  max-width: 1200px;
+  margin: 0 100px 0 100px;
+}
+
+@media (max-width: 768px) {
+  .custom-modal .modal-body {
+    flex-direction: column; /* Stack image and text vertically on smaller screens */
+  }
+  
+  .modal-carousel-container {
+    width: 100%;
+  }
+
+  .modal-body .d-flex {
+    flex-direction: column;
+  }
+
+  .custom-modal .modal-body img {
+    max-width: 100%; /* Allow the image to scale down on smaller screens */
+    margin-bottom: 16px; /* Add spacing below the image */
+  }
+  .custom-modal .modal-body {
+    padding: 0;
+  }
+
+  .modal-text-container p {
+    margin-left: 10px;
+  }
+  .modal-text-container h3 {
+    margin-left: 10px;
+  }
+  .modal-dialog {
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+  }
+}
+
+
+
+.modal-body .text-center {
+  position: sticky;
+  bottom: 0;
+  padding: 10px;
+  z-index: 100;
 }
