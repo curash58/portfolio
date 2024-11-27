@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Container, Row, Col, Nav } from "react-bootstrap";
+import { Container, Row, Col, Nav, Navbar } from "react-bootstrap";
 import "./Info.css";
 
 const Info = () => {
-  const [activeSection, setActiveSection] = useState("For anyone");
+  const [activeSection, setActiveSection] = useState("For everyone");
   const [activeMenu, setActiveMenu] = useState("intro");
   const [scrambledText, setScrambledText] = useState("");
 
@@ -17,24 +17,22 @@ const Info = () => {
   };
 
   const content = {
-    "For anyone":
-      "Hello there, I'm a designer who cares about making beautiful things that help people.",
+    "For everyone":
+      "Hdwadwwello there, I'm a designer who cares about making beautiful things that help people.",
     Recruiters:
       "I'm a systems thinker with a high bar for quality. From process to pixels, I'll collaborate with you, learn from you, and help make something we're proud of.",
-    "Design Directors":
+    Engineers:
       "I take pride in my craft, and love mentoring earlier career designers. I develop cross-functional partnerships, and thrive in complex, ambiguous environments.",
   };
 
   // Scrambling animation logic for the text
   useEffect(() => {
     const originalText = content[activeSection];
-    const scrambleDuration = 1; // Duration for the animation in milliseconds
+    const scrambleDuration = 3500; // Duration for the animation in milliseconds
     const intervalDelay = 50; // Delay between each iteration
     let scrambled = Array(originalText.length)
       .fill("")
-      .map(() =>
-        String.fromCharCode(33 + Math.floor(Math.random() * 94))
-      )
+      .map(() => String.fromCharCode(33 + Math.floor(Math.random() * 94)))
       .join("");
     let iterations = 0;
     const totalIterations = scrambleDuration / intervalDelay;
@@ -93,8 +91,8 @@ const Info = () => {
   return (
     <Container>
       <Row>
-        {/* Left-Hand Menu */}
-        <Col md={3} className="info-sidebar">
+        {/* Responsive Sidebar/Nav */}
+        <Col md={3} className="info-sidebar d-none d-md-block">
           <Nav className="info-sidebar-nav flex-column">
             {Object.keys(sections).map((key) => (
               <Nav.Link
@@ -108,6 +106,30 @@ const Info = () => {
               </Nav.Link>
             ))}
           </Nav>
+        </Col>
+
+        {/* Collapsible Navbar for Mobile */}
+        <Col xs={12} className="d-md-none mt-3">
+            
+          <Navbar expand="md" variant="dark" className="rounded-3 p-2">
+            <Navbar.Toggle aria-controls="mobile-navbar" />
+            <Navbar.Collapse id="mobile-navbar">
+              <Nav className="flex-column">
+                {Object.keys(sections).map((key) => (
+                  <Nav.Link
+                    key={key}
+                    href={`#${key}`}
+                    className={`info-nav-link ${
+                      activeMenu === key ? "info-nav-active" : ""
+                    }`}
+                    onClick={() => setActiveMenu(key)}
+                  >
+                    {key.charAt(0).toUpperCase() + key.slice(1)}
+                  </Nav.Link>
+                ))}
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
         </Col>
 
         {/* Main Content */}
