@@ -94,40 +94,24 @@
   .info-tabs .info-tab-link {
     padding: 0.25rem 0.4rem;
   }
-}
-/* Mobile Navbar Styling */
-.navbar-dark .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-.navbar-dark .nav-link {
-  color: white;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  text-transform: capitalize;
-}
-
-/* Disable hover effect on the Navbar.Toggle button */
-.navbar-dark .navbar-toggler:hover,
-.navbar-dark .navbar-toggler:focus {
-  box-shadow: none; /* Removes the hover box shadow */
-  background-color: transparent; /* Keeps the background color consistent */
- }
-
-/* Disable the focus outline for the button */
-.navbar-dark .navbar-toggler:focus-visible {
-  outline: none;
-}
-
-/* Keep the toggler button appearance consistent when active */
-.navbar-dark .navbar-toggler:active {
-  background-color: transparent; /* No background color change on active */
-  border-color: rgba(255, 255, 255, 0.5); /* Keeps border consistent */
-}
-.info-sidebar-nav .info-nav-link:hover,
-.navbar-dark .nav-link:hover {
-  text-decoration: none; /* Removes default underline */
-  border-bottom: 2px solid white; /* Adds a white underline */
-  padding-bottom: 2px; /* Adjust spacing to avoid layout shift */
-  transition: border-bottom 0.3s ease; /* Smooth underline transition */
+  #mobile-navbar {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
+  .info-nav-link{
+    color: white;
+  }
+  .info-nav-active {
+    color: #ffffff; /* Active white color */
+    font-weight: bold;
+    border-bottom: 3px solid #ffffff; /* White left border for active section */
+  }
+  .info-nav-link:hover {
+    color: #ffffff; /* Highlight white on hover */
+  }
+  .custom-menu-btn{
+    position: sticky; /* Button scrolls with the content but remains visible at the top */
+    top: 65px;
+    left: 20px;
+  }
 }

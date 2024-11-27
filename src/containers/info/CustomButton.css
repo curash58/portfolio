@@ -1,0 +1,49 @@
+.menuToggle {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    border-radius: 4px;
+    width: 49px;
+    height: 49px;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menuToggle span {
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: #ffffff;
+    transition: all 0.15s ease;
+    position: absolute;
+    transform: rotate(0deg);
+  }
+  
+  .menuToggle span:first-child {
+    width: 30px;
+    top: 18px;
+  }
+  .menuToggle span:last-child {
+    width: 20px;
+    top: 27px;
+  }
+  
+  .menuToggle[aria-expanded="true"] span {
+    top: 23px;
+  }
+  
+  .menuToggle[aria-expanded="true"] span:first-child {
+    transform: rotate(45deg);
+  }
+  
+  .menuToggle[aria-expanded="true"] span:last-child {
+    transform: rotate(-45deg);
+    width: 30px;
+  }
+  

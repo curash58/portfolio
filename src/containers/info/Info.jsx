@@ -1,8 +1,25 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Container, Row, Col, Nav, Navbar } from "react-bootstrap";
 import "./Info.css";
+import "./CustomButton.css";
+
+const CustomMenuButton = ({ isExpanded, onToggle }) => {
+  return (
+    <button
+      aria-label="Menu"
+      className="menuToggle"
+      aria-expanded={isExpanded}
+      aria-haspopup="true"
+      onClick={onToggle}
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  );
+};
 
 const Info = () => {
+  const [isExpanded, setIsExpanded] = useState(false); // State for menu toggle
   const [activeSection, setActiveSection] = useState("For everyone");
   const [activeMenu, setActiveMenu] = useState("intro");
   const [scrambledText, setScrambledText] = useState("");
@@ -18,11 +35,22 @@ const Info = () => {
 
   const content = {
     "For everyone":
-      "Hdwadwwello there, I'm a designer who cares about making beautiful things that help people.",
+      "Hello there, I'm a designer who cares about making beautiful things that help people.",
     Recruiters:
       "I'm a systems thinker with a high bar for quality. From process to pixels, I'll collaborate with you, learn from you, and help make something we're proud of.",
     Engineers:
       "I take pride in my craft, and love mentoring earlier career designers. I develop cross-functional partnerships, and thrive in complex, ambiguous environments.",
+  };
+
+  // Toggle menu visibility
+  const handleToggle = () => {
+    setIsExpanded((prev) => !prev);
+  };
+
+  // Close the menu automatically when clicking a link
+  const handleLinkClick = (key) => {
+    setActiveMenu(key); // Set the active menu item
+    setIsExpanded(false); // Close the menu
   };
 
   // Scrambling animation logic for the text
@@ -109,27 +137,27 @@ const Info = () => {
         </Col>
 
         {/* Collapsible Navbar for Mobile */}
-        <Col xs={12} className="d-md-none mt-3">
-            
-          <Navbar expand="md" variant="dark" className="rounded-3 p-2">
-            <Navbar.Toggle aria-controls="mobile-navbar" />
-            <Navbar.Collapse id="mobile-navbar">
-              <Nav className="flex-column">
-                {Object.keys(sections).map((key) => (
-                  <Nav.Link
-                    key={key}
-                    href={`#${key}`}
-                    className={`info-nav-link ${
-                      activeMenu === key ? "info-nav-active" : ""
-                    }`}
-                    onClick={() => setActiveMenu(key)}
-                  >
-                    {key.charAt(0).toUpperCase() + key.slice(1)}
-                  </Nav.Link>
-                ))}
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
+        <Col xs={12} className="d-md-none mt-3 custom-menu-btn">
+          <CustomMenuButton isExpanded={isExpanded} onToggle={handleToggle} />
+          <Navbar.Collapse
+            id="mobile-navbar"
+            className={isExpanded ? "show" : ""}
+          >
+            <Nav className="flex-column">
+              {Object.keys(sections).map((key) => (
+                <Nav.Link
+                  key={key}
+                  href={`#${key}`}
+                  className={`info-nav-link ${
+                    activeMenu === key ? "info-nav-active" : ""
+                  }`}
+                  onClick={() => handleLinkClick(key)} // Close menu on link click
+                >
+                  {key.charAt(0).toUpperCase() + key.slice(1)}
+                </Nav.Link>
+              ))}
+            </Nav>
+          </Navbar.Collapse>
         </Col>
 
         {/* Main Content */}
