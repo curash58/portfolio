@@ -1,0 +1,84 @@
+/* Sidebar Styling */
+.info-sidebar {
+    position: sticky;
+    top: 0;
+    padding-top: 60px;
+    height: 50vh; /* Full viewport height */
+    background-color: rgba(0, 0, 0, 0); /* Background remains dark */
+    overflow-y: auto; /* Scrollable if content exceeds height */
+}
+
+.info-dynamic-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    line-height: 1.5;
+    transition: all 0.3s ease; /* Smooth text transition */
+}
+
+.info-sidebar-nav .info-nav-link {
+    color: #ffffff; /* Default white text */
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s ease, border-left 0.3s ease;
+}
+
+.info-tabs {
+    border-bottom: none; /* Removes the default border-bottom */
+}
+
+.info-sidebar-nav .info-nav-link:hover {
+    color: #ffffff; /* Highlight white on hover */
+}
+
+.info-sidebar-nav .info-nav-active {
+    color: #ffffff; /* Active white color */
+    font-weight: bold;
+    border-left: 3px solid #ffffff; /* White left border for active section */
+}
+
+/* Tabs Styling */
+.info-tabs .info-tab-link {
+    color: white; /* White text for inactive tabs */
+    background-color: rgba(0, 0, 0, 0); /* Black background */
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+.info-tabs .info-tab-link:hover {
+    color: rgb(255, 255, 255); /* White text on hover */
+}
+
+.info-tabs .info-tab-active {
+    color: white; /* White text for active tab */
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+/* Section Styling */
+.info-content {
+    padding: 2rem;
+}
+
+.info-section {
+    min-height: 100vh; /* Each section takes up full viewport height */
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Add slight contrast between sections */
+    color: white; /* Ensure text is visible on dark background */
+}
+
+.info-dynamic-content {
+    margin-top: 2rem;
+}
+
+.info-dynamic-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white; /* White text */
+}
+#intro{
+    border-radius: 16px 16px 0 0;
+}
