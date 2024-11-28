@@ -35,11 +35,11 @@ const Info = () => {
 
   const content = {
     "For everyone":
-      "Hello there, I'm a designer who cares about making beautiful things that help people.",
+      "Hello there, I’m student at Humber Polytechnic with a GPA of 92.3. Outside of academics, you’ll find me enjoying tennis, hiking, or brainstorming ideas.",
     Recruiters:
-      "I'm a systems thinker with a high bar for quality. From process to pixels, I'll collaborate with you, learn from you, and help make something we're proud of.",
+      "Excited to contribute to a Summer 2025 internship. With a solid technical foundation and experience in modern tools, I’m eager to grow, collaborate, and learn from experienced mentors.",
     Engineers:
-      "I take pride in my craft, and love mentoring earlier career designers. I develop cross-functional partnerships, and thrive in complex, ambiguous environments.",
+      "Fluent in /frontend.logic && backend.expertise—built (real_time.apps) + (C++.algorithms) && (Java.structures).",
   };
 
   // Toggle menu visibility

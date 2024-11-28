@@ -2,7 +2,7 @@
 .info-sidebar {
   position: sticky;
   top: 0;
-  padding-top: 60px;
+  padding-top: 20px;
   height: 50vh;
   background-color: rgba(0, 0, 0, 0); /* Background remains dark */
   overflow-y: auto; /* Scrollable if content exceeds height */

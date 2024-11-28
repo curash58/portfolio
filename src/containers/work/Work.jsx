@@ -9,39 +9,29 @@ const Work = () => {
       description:
         "Developed website for Cargo company implementing Admin panel",
       imageUrls: [
-        "/images/1.png",
-        "/images/1.png",
-        "/images/1.png",
-        "/images/1.png",
-        "/images/1.png",
+        "/images/Cargo/1.png",
+        "/images/Cargo/2.png",
+        // "/images/Cargo/3.JPG",
+        "/images/Cargo/4.png",
+        "/images/Cargo/5.png",
+        "/images/Cargo/6.png",
       ],
-      projectLink: "https://ph.poliiiiiiiiina.crabdance.com",
+      projectLink: "https://test.test.crabdance.com",
     },
     {
-      title: "Nexus",
+      title: "Photograph",
       description:
         "Developed website for Cargo company implementing Admin panel",
-      imageUrls: ["/images/1.png", "/images/1.png", "/images/1.png"],
-    },
-    {
-      title: "Nexus",
-      description: "Designing the Nexus app",
-      imageUrls: ["/images/1.png", "/images/1.png"],
-    },
-    {
-      title: "Nexus",
-      description: "Designing the Nexus app",
-      imageUrls: ["/images/1.png", "/images/1.png"],
-    },
-    {
-      title: "Nexus",
-      description: "Designing the Nexus app",
-      imageUrls: ["/images/1.png", "/images/1.png"],
-    },
-    {
-      title: "Nexus",
-      description: "Designing the Nexus app",
-      imageUrls: ["/images/1.png", "/images/1.png"],
+      imageUrls: [
+        "/images/Photographer/1.png", 
+        "/images/Photographer/2.png", 
+        "/images/Photographer/3.png", 
+        "/images/Photographer/4.png", 
+        "/images/Photographer/5.png", 
+        "/images/Photographer/6.png", 
+        
+      ],
+      projectLink: "https://ph.poliiiiiiiiina.crabdance.com",
     },
   ];
   return (

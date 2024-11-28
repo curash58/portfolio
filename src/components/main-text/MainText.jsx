@@ -9,9 +9,10 @@ const MainText = () => {
       {/* Text content */}
       <div className="main-text-left">
         <h1 className="main-text">
-        
-          Hello there, {/* <span className="highlight">products</span> */}I'm web-developer, <br />
-          and I love what I make.
+          Hi, I'm a student seeaking for summer-internship.
+        {/* <span className="highlight">products</span> */}
+          {/* Hello there, I'm web-developer, <br />
+          and I love what I make. */}
         </h1>
         <p className="sub-text">
           Student at Humber Polythecnic. Toronto ON. <br />

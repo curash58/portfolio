@@ -23,7 +23,7 @@
   
   
   .footer-icon:hover {
-    color: #ffcc00;
+    color: #7700ff;
   }
 
   .footer-icon.linkedin:hover {
@@ -35,10 +35,6 @@
     margin-left: 15px;
     font-size: 1.2rem;
     transition: color 0.3s ease;
-  }
-  
-  .footer-icon:hover {
-    color: #ffcc00;
   }
   
   @media (max-width: 768px) {

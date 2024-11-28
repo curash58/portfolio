@@ -29,7 +29,7 @@ const CustomNavbar = () => {
             <FaLinkedin size={20} />
           </a>
           <a
-            href="/path/to/resume.pdf"
+            href="https://drive.google.com/file/d/1LIH-icku4_Mu0FnLBRJjsCGYHw_7IeXp/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="icon-button"

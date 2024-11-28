@@ -46,7 +46,7 @@ const Footer = () => {
               <FaLinkedin />
             </a>
             <a
-              href="mailto:youremail@gmail.com"
+              href="mailto:varsen2302@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-icon"
