@@ -2,7 +2,7 @@
 .info-sidebar {
   position: sticky;
   top: 0;
-  padding-top: 20px;
+  padding-top: 60px;
   height: 50vh;
   background-color: rgba(0, 0, 0, 0); /* Background remains dark */
   overflow-y: auto; /* Scrollable if content exceeds height */
@@ -24,7 +24,8 @@
 }
 
 .info-tabs {
-  border-bottom: none; /* Removes the default border-bottom */
+  border-bottom: none; 
+  padding-top: 35px;
 }
 
 .info-sidebar-nav .info-nav-link:hover {
@@ -115,3 +116,4 @@
     left: 20px;
   }
 }
+

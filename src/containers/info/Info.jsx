@@ -25,11 +25,11 @@ const Info = () => {
   const [scrambledText, setScrambledText] = useState("");
 
   const sections = {
-    intro: useRef(null),
-    work: useRef(null),
-    values: useRef(null),
-    background: useRef(null),
-    references: useRef(null),
+    "About Me": useRef(null),
+    "Programming Journey": useRef(null),
+    "Professional Experience & Projects": useRef(null),
+    "Hobbies & Inspirations": useRef(null),
+    "Values & Life Philosophy": useRef(null),
     contact: useRef(null),
   };
 
@@ -184,37 +184,121 @@ const Info = () => {
           </div>
 
           {/* Sections for Scrolling */}
-          <div id="intro" ref={sections.intro} className="info-section">
-            <h2>Intro</h2>
-            <p>Welcome to the intro section.</p>
-          </div>
-          <div id="work" ref={sections.work} className="info-section">
-            <h2>Work</h2>
-            <p>Details about work experience.</p>
-          </div>
-          <div id="values" ref={sections.values} className="info-section">
-            <h2>Values</h2>
-            <p>Core values and beliefs.</p>
-          </div>
           <div
-            id="background"
-            ref={sections.background}
+            id="about-me"
+            ref={sections["About Me"]}
             className="info-section"
           >
-            <h2>Background</h2>
-            <p>Details about background and history.</p>
+            <h2>About Me</h2>
+            <p>
+              I’m a Computer Programming student at Humber Polytechnic, striving
+              to grow as a developer while seeking a Summer 2025 internship.
+              With a solid foundation in software development and a passion for
+              learning, I’m excited to bring my technical skills and
+              collaborative mindset to innovative projects.
+            </p>
           </div>
+
           <div
-            id="references"
-            ref={sections.references}
+            id="programming-journey"
+            ref={sections["Programming Journey"]}
             className="info-section"
           >
-            <h2>References</h2>
-            <p>References and testimonials.</p>
+            <h2>Programming Journey</h2>
+            <p>
+              My passion for programming started five years ago when I wrote my
+              first program in C++ under the guidance of a tutor. I’ve since
+              progressed through coding schools, tackled challenges on platforms
+              like LeetCode, and explored advanced topics like AVL trees, linked
+              lists, and design patterns.
+            </p>
+            <p>
+              From crafting Minecraft server plugins in Java to creating
+              Telegram bots in Python, I’ve built diverse skills. At Humber, I
+              delved deeper into React, Java, SQL, and CI/CD tools like Jenkins,
+              Postman, and AWS, continuously expanding my expertise.
+            </p>
           </div>
+
+          <div
+            id="professional-experience-projects"
+            ref={sections["Professional Experience & Projects"]}
+            className="info-section"
+          >
+            <h2>Professional Experience & Projects</h2>
+            <p>
+              As a Peer Tutor at Humber Polytechnic, I’ve mentored students in
+              various subjects, simplified complex concepts, and fostered
+              problem-solving through practical examples. My role taught me the
+              importance of patience, preparation, and adaptability.
+            </p>
+            <p>
+              My projects include:
+              <ul>
+                <li>
+                  <strong>Logistics Website:</strong> A responsive site with
+                  Firebase-powered features, an admin panel, and email
+                  subscription functionality.
+                </li>
+                <li>
+                  <strong>Photography Portfolio:</strong> A dynamic website with
+                  Firebase integration for photo management and category
+                  updates, hosted for smooth performance.
+                </li>
+              </ul>
+              You can explore more of my projects on the{" "}
+              <strong>Work Page</strong>.
+            </p>
+          </div>
+
+          <div
+            id="hobbies-inspirations"
+            ref={sections["Hobbies & Inspirations"]}
+            className="info-section"
+          >
+            <h2>Hobbies & Inspirations</h2>
+            <p>
+              Tennis keeps me focused and physically active, while hiking
+              inspires creative solutions and energizes me with nature’s beauty.
+              I also enjoy chess, which hones my strategic thinking and
+              decision-making skills—valuable traits for a developer.
+            </p>
+            <p>
+              Outside of programming, I’m currently reading{" "}
+              <em>The Richest Man in Babylon</em>, a book that fuels my
+              perspective on personal growth and discipline.
+            </p>
+          </div>
+
+          <div
+            id="values-life-philosophy"
+            ref={sections["Values & Life Philosophy"]}
+            className="info-section"
+          >
+            <h2>Values & Life Philosophy</h2>
+            <p>
+              I believe in taking joy in life’s simple pleasures and embracing
+              every day with gratitude. My guiding principle is:{" "}
+              <em>"Not everything that works for you works for others."</em>{" "}
+              This mindset drives my approach to collaboration, learning, and
+              creating solutions that make a difference.
+            </p>
+          </div>
+
           <div id="contact" ref={sections.contact} className="info-section">
             <h2>Contact</h2>
-            <p>Contact information and details.</p>
+            <p>
+              Let’s build something amazing together! Reach me at{" "}
+              <a href="mailto:varsen2302@gmail.com">varsen2302@gmail.com</a> or
+              connect on{" "}
+              <a
+                href="https://www.linkedin.com/in/arsen-valeev-aa92442ba/"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+              .
+            </p>
           </div>
         </Col>
       </Row>
