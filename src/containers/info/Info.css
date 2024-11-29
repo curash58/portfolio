@@ -17,7 +17,7 @@
 }
 
 .info-sidebar-nav .info-nav-link {
-  color: #ffffff; /* Default white text */
+  color: #ffffff; 
   text-decoration: none;
   padding: 0.5rem;
   transition: color 0.3s ease, border-left 0.3s ease;
@@ -60,7 +60,7 @@
 }
 
 .info-section {
-  min-height: 100vh; /* Each section takes up full viewport height */
+  min-height: 50vh; /* Each section takes up full viewport height */
   padding: 2rem;
   background-color: rgba(
     255,
@@ -80,7 +80,7 @@
   font-weight: bold;
   color: white; /* White text */
 }
-#intro {
+#about-me {
   border-radius: 16px 16px 0 0;
 }
 

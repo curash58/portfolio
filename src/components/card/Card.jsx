@@ -3,8 +3,7 @@ import { Modal, Carousel } from "react-bootstrap";
 import "./Card.css";
 
 const Card = ({ title, description, imageUrls, projectLink }) => {
-  console.log(projectLink);
-  // State for the dynamic width of the card
+  
   const [cardWidth, setCardWidth] = useState("auto");
 
   // State for modal visibility

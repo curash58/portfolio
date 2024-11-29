@@ -21,15 +21,24 @@ const CustomMenuButton = ({ isExpanded, onToggle }) => {
 const Info = () => {
   const [isExpanded, setIsExpanded] = useState(false); // State for menu toggle
   const [activeSection, setActiveSection] = useState("For everyone");
-  const [activeMenu, setActiveMenu] = useState("intro");
+  const [activeMenu, setActiveMenu] = useState("about-me");
   const [scrambledText, setScrambledText] = useState("");
 
+  const sectionsName = [
+    "About Me",
+    "Programming Journey",
+    "Professional Experience & Projects",
+    "Hobbies & Inspirations",
+    "Values & Life Philosophy",
+    "Contact",
+  ];
+
   const sections = {
-    "About Me": useRef(null),
-    "Programming Journey": useRef(null),
-    "Professional Experience & Projects": useRef(null),
-    "Hobbies & Inspirations": useRef(null),
-    "Values & Life Philosophy": useRef(null),
+    "about-me": useRef(null),
+    "programming-journey": useRef(null),
+    "professional-experience-projects": useRef(null),
+    "hobbies-inspirations": useRef(null),
+    "values-life-philosophy": useRef(null),
     contact: useRef(null),
   };
 
@@ -58,28 +67,36 @@ const Info = () => {
     const originalText = content[activeSection];
     const scrambleDuration = 3500; // Duration for the animation in milliseconds
     const intervalDelay = 50; // Delay between each iteration
-    let scrambled = Array(originalText.length)
-      .fill("")
+    const totalIterations = Math.floor(scrambleDuration / intervalDelay);
+
+    let scrambled = originalText
+      .split("")
       .map(() => String.fromCharCode(33 + Math.floor(Math.random() * 94)))
       .join("");
+
     let iterations = 0;
-    const totalIterations = scrambleDuration / intervalDelay;
 
     const scrambleInterval = setInterval(() => {
-      scrambled = scrambled
+      scrambled = originalText
         .split("")
-        .map((char, index) =>
-          iterations / totalIterations > index / originalText.length
-            ? originalText[index]
-            : String.fromCharCode(33 + Math.floor(Math.random() * 94))
-        )
+        .map((char, index) => {
+          if (iterations / totalIterations > index / originalText.length) {
+            return char; // Keep the original character if its turn is done
+          } else if (char === " ") {
+            return " "; // Maintain spaces as is
+          } else {
+            return String.fromCharCode(33 + Math.floor(Math.random() * 94)); // Random character
+          }
+        })
         .join("");
 
       setScrambledText(scrambled);
 
       if (iterations >= totalIterations) {
         clearInterval(scrambleInterval);
+        setScrambledText(originalText); // Ensure the final text is the original
       }
+
       iterations++;
     }, intervalDelay);
 
@@ -95,11 +112,8 @@ const Info = () => {
           }
         });
       },
-      {
-        root: null,
-        threshold: 0.6,
-      }
-    );
+      { root: null, threshold: 0.6 }
+   );
 
     Object.values(sections).forEach((ref) => {
       if (ref.current) {
@@ -122,7 +136,7 @@ const Info = () => {
         {/* Responsive Sidebar/Nav */}
         <Col md={3} className="info-sidebar d-none d-md-block">
           <Nav className="info-sidebar-nav flex-column">
-            {Object.keys(sections).map((key) => (
+            {Object.keys(sections).map((key, index) => (
               <Nav.Link
                 key={key}
                 href={`#${key}`}
@@ -130,7 +144,7 @@ const Info = () => {
                   activeMenu === key ? "info-nav-active" : ""
                 }`}
               >
-                {key.charAt(0).toUpperCase() + key.slice(1)}
+                {sectionsName[index]}
               </Nav.Link>
             ))}
           </Nav>
@@ -144,7 +158,7 @@ const Info = () => {
             className={isExpanded ? "show" : ""}
           >
             <Nav className="flex-column">
-              {Object.keys(sections).map((key) => (
+              {Object.keys(sections).map((key, index) => (
                 <Nav.Link
                   key={key}
                   href={`#${key}`}
@@ -153,7 +167,7 @@ const Info = () => {
                   }`}
                   onClick={() => handleLinkClick(key)} // Close menu on link click
                 >
-                  {key.charAt(0).toUpperCase() + key.slice(1)}
+                  {sectionsName[index]}
                 </Nav.Link>
               ))}
             </Nav>
@@ -186,7 +200,7 @@ const Info = () => {
           {/* Sections for Scrolling */}
           <div
             id="about-me"
-            ref={sections["About Me"]}
+            ref={sections["about-me"]}
             className="info-section"
           >
             <h2>About Me</h2>
@@ -201,7 +215,7 @@ const Info = () => {
 
           <div
             id="programming-journey"
-            ref={sections["Programming Journey"]}
+            ref={sections["programming-journey"]}
             className="info-section"
           >
             <h2>Programming Journey</h2>
@@ -222,7 +236,7 @@ const Info = () => {
 
           <div
             id="professional-experience-projects"
-            ref={sections["Professional Experience & Projects"]}
+            ref={sections["professional-experience-projects"]}
             className="info-section"
           >
             <h2>Professional Experience & Projects</h2>
@@ -232,8 +246,8 @@ const Info = () => {
               problem-solving through practical examples. My role taught me the
               importance of patience, preparation, and adaptability.
             </p>
-            <p>
-              My projects include:
+            <div>
+              <p>My projects include:</p>
               <ul>
                 <li>
                   <strong>Logistics Website:</strong> A responsive site with
@@ -246,14 +260,16 @@ const Info = () => {
                   updates, hosted for smooth performance.
                 </li>
               </ul>
-              You can explore more of my projects on the{" "}
-              <strong>Work Page</strong>.
-            </p>
+              <p>
+                You can explore more of my projects on the{" "}
+                <strong>Work Page</strong>.
+              </p>
+            </div>
           </div>
 
           <div
             id="hobbies-inspirations"
-            ref={sections["Hobbies & Inspirations"]}
+            ref={sections["hobbies-inspirations"]}
             className="info-section"
           >
             <h2>Hobbies & Inspirations</h2>
@@ -272,7 +288,7 @@ const Info = () => {
 
           <div
             id="values-life-philosophy"
-            ref={sections["Values & Life Philosophy"]}
+            ref={sections["values-life-philosophy"]}
             className="info-section"
           >
             <h2>Values & Life Philosophy</h2>
