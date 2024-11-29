@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Container, Row, Col, Nav, Navbar, Carousel } from "react-bootstrap";
 import "./Info.css";
 import "./CustomButton.css";
+import { Timeline } from "../../components";
 
 const CustomMenuButton = ({ isExpanded, onToggle }) => {
   return (
@@ -267,8 +268,10 @@ const Info = () => {
               delved deeper into React, Java, SQL, and CI/CD tools like Jenkins,
               Postman, and AWS, continuously expanding my expertise.
             </p>
+            <div className="timeline-container">
+              <Timeline />
+            </div>
           </div>
-
           <div
             id="professional-experience-projects"
             ref={sections["professional-experience-projects"]}

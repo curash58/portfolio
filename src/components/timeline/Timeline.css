@@ -1,0 +1,34 @@
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.timeline-icon {
+  font-size: 2.5rem; /* Make the icons larger */
+  color: #ffffff; /* Change icon color if needed */
+  margin-right: 20px; /* Add spacing between icon and content */
+}
+
+.timeline-content {
+  flex-grow: 1;
+}
+
+.timeline-content h5 {
+  margin: 0 0 5px;
+  font-size: 1.25rem; /* Adjust title size */
+  font-weight: bold;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 1rem; /* Adjust paragraph font size */
+  color: #6c757d;
+}
