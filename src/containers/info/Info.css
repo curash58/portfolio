@@ -193,3 +193,52 @@
     z-index: 1100; 
   }
 }
+
+.info-section ul {
+  list-style: none;
+  padding-left: 0; 
+}
+.info-section ul li {
+  margin-bottom: 0.5rem; 
+  display: flex; 
+  align-items: center;
+}
+
+.info-section ul li .icon {
+  margin-right: 0.5rem; 
+  font-size: 1.5rem; 
+}
+
+.info-section ul li .big {
+  font-size: 1.85rem; 
+}
+
+.info-section ul li strong {
+  margin-right: 0.5rem; /* Adds space between the colon and the text */
+}
+/* Adjust list items for mobile view */
+@media (max-width: 768px) {
+  .info-section ul li {
+    display: flex;
+    align-items: flex-start; /* Align icon and text to the top */
+    margin-bottom: 1rem; /* Space between items */
+    flex-wrap: wrap; /* Allow wrapping of text for smaller screens */
+  }
+
+  .info-section ul li .icon {
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    margin-right: 0.75rem; /* Space between icon and text */
+    font-size: 1.2rem; /* Adjust icon size */
+    margin-top: 0.3rem; /* Align icon with the text vertically */
+  }
+
+  .info-section ul li strong {
+    margin-right: 0.5rem; /* Add spacing between title and description */
+    font-size: 1rem; /* Ensure text is readable on mobile */
+    font-weight: bold;
+  }
+
+  .info-section ul {
+    padding-left: 0; /* Remove unnecessary padding on mobile */
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { FaCode, FaDatabase, FaTools, FaTruck, FaCamera } from "react-icons/fa";
 import { Container, Row, Col, Nav, Navbar, Carousel } from "react-bootstrap";
 import "./Info.css";
 import "./CustomButton.css";
@@ -285,21 +286,23 @@ const Info = () => {
               importance of patience, preparation, and adaptability.
             </p>
             <div>
-              <p>My projects include:</p>
+              <p>My projects:</p>
               <ul>
                 <li>
+                  <FaTruck className="icon big" /> 
                   <strong>Logistics Website:</strong> A responsive site with
                   Firebase-powered features, an admin panel, and email
                   subscription functionality.
                 </li>
                 <li>
+                  <FaCamera className="icon big" /> 
                   <strong>Photography Portfolio:</strong> A dynamic website with
                   Firebase integration for photo management and category
                   updates, hosted for smooth performance.
                 </li>
               </ul>
               <p>
-                You can explore more of my projects on the{" "}
+                You can explore more of my projects on the {" "}
                 <strong>Work Page</strong>.
               </p>
               <p>
@@ -307,14 +310,17 @@ const Info = () => {
               </p>
               <ul>
                 <li>
-                  <strong>Programming:</strong> JavaScript, Java, C++, React,
-                  Docker, AWS, Spring Boot, Tailwind CSS, HTML, CSS
+                  <FaCode className="icon" /> <strong>Programming:</strong>
+                  JavaScript, Java, C++, React, Docker, AWS, Spring Boot,
+                  Tailwind CSS, HTML, CSS
                 </li>
                 <li>
-                  <strong>Databases:</strong> SQL, Firebase, Appwrite
+                  <FaDatabase className="icon" /> <strong>Databases:</strong>
+                  SQL, Firebase, Appwrite
                 </li>
                 <li>
-                  <strong>Tools:</strong> Git, GitHub, Jenkins, Postman
+                  <FaTools className="icon" /> <strong>Tools:</strong> Git,
+                  GitHub, Jenkins, Postman
                 </li>
               </ul>
             </div>
