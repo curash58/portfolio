@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: row; /* Stack cards vertically */
     gap: 40px; 
-    margin: 40px 45px 0 45px;
     flex-wrap: wrap;
     /* max-width: 1200px;  */
   }
