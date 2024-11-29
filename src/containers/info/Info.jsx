@@ -211,10 +211,10 @@ const Info = () => {
                   <Carousel controls={false} indicators={false}>
                     {[
                       "./images/Info/4.jpg",
-                      "./images/Info/5.jpg",
+                      "./images/Info/5.JPG",
                       "./images/Info/1.jpg",
                       "./images/Info/2.jpg",
-                      "./images/Info/3.jpg",
+                      "./images/Info/3.JPG",
                     ].map((src, index) => (
                       <Carousel.Item key={index}>
                         <img
