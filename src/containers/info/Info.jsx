@@ -326,20 +326,55 @@ const Info = () => {
             className="info-section"
           >
             <h2>Hobbies & Inspirations</h2>
-            <p>
-              Tennis keeps me focused and physically active, while hiking
-              inspires creative solutions and energizes me with nature’s beauty.
-              I also enjoy chess, which hones my strategic thinking and
-              decision-making skills—valuable traits for a developer.
-            </p>
-            <p>
-              Outside of programming, I’m currently reading{" "}
-              <em>The Richest Man in Babylon</em>, a book that fuels my
-              perspective on personal growth and discipline.
-            </p>
+            <Row>
+              {/* Left Column: Carousel */}
+              <Col md={6}>
+                <div className="about-carousel">
+                  <Carousel controls={false} indicators={false}>
+                    {[
+                      "./images/Hobbies/1.jpg",
+                      "./images/Hobbies/2.jpg",
+                      "./images/Hobbies/3.jpg",
+                      "./images/Hobbies/4.jpg",
+                      "./images/Hobbies/5.jpg",
+                      "./images/Hobbies/6.jpg",
+                      "./images/Hobbies/7.jpg",
+                      "./images/Hobbies/8.JPG",
+                      "./images/Hobbies/9.JPG",
+                    ].map((src, index) => (
+                      <Carousel.Item key={index}>
+                        <img
+                          className="d-block w-100 rounded-4 mb-3"
+                          src={src}
+                          alt={`Hobby ${index + 1}`}
+                        />
+                      </Carousel.Item>
+                    ))}
+                  </Carousel>
+                </div>
+              </Col>
+
+              {/* Right Column: Text */}
+              <Col md={6}>
+                <div className="hobbies-text">
+                  <p>
+                    Tennis keeps me focused and physically active, while hiking
+                    inspires creative solutions and energizes me with nature’s
+                    beauty. I also enjoy chess, which hones my strategic
+                    thinking and decision-making skills—valuable traits for a
+                    developer.
+                  </p>
+                  <p>
+                    Outside of programming, I’m currently reading{" "}
+                    <em>The Richest Man in Babylon</em>, a book that fuels my
+                    perspective on personal growth and discipline.
+                  </p>
+                </div>
+              </Col>
+            </Row>
           </div>
 
-          <div
+          {/* <div
             id="values-life-philosophy"
             ref={sections["values-life-philosophy"]}
             className="info-section"
@@ -352,7 +387,7 @@ const Info = () => {
               This mindset drives my approach to collaboration, learning, and
               creating solutions that make a difference.
             </p>
-          </div>
+          </div> */}
 
           <div id="contact" ref={sections.contact} className="info-section">
             <h2>Contact</h2>
