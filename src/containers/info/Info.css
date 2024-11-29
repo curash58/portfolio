@@ -242,3 +242,76 @@
     padding-left: 0; /* Remove unnecessary padding on mobile */
   }
 }
+.contact-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Align content to the left for lighter feel */
+  gap: 1rem; /* Add spacing between text and links */
+}
+
+.contact-text {
+  font-size: 1.3rem !important;
+  margin-left: 10px !important; 
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align each link to the left */
+  gap: 0.5rem; /* Space between links */
+}
+
+.contact-item {
+  font-size: 1.3rem;/* Reduce font size slightly */
+  color: #ffffff; /* Maintain contrast for links */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500; /* Medium weight for clear visibility */
+  position: relative; /* Needed for hover effect */
+  transition: color 0.3s ease;
+}
+
+.contact-item::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 1px;
+  background-color: #ffffff; /* Light blue for underline effect */
+  transition: width 0.3s ease-in-out;
+}
+
+.contact-item:hover::after {
+  width: 100%; /* Underline expands on hover */
+}
+/* Pulsating Dot */
+.radius {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(40, 167, 69, 0); /* Green color */
+  animation: pulse 3s cubic-bezier(0.1, 0.5, 0.6, 1) infinite;
+}
+
+.dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #28a745; /* Solid green for the dot */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    background-color: rgba(40, 167, 69, 0.3); /* Faint green */
+    transform: scale(1);
+  }
+  66.666% {
+    background-color: rgba(40, 167, 69, 0.1); /* Fading green */
+    transform: scale(4);
+  }
+  100% {
+    background-color: rgba(40, 167, 69, 0); /* Fully transparent */
+    transform: scale(6);
+  }
+}

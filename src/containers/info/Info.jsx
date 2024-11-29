@@ -31,7 +31,6 @@ const Info = () => {
     "Programming Journey",
     "Professional Experience & Projects",
     "Hobbies & Inspirations",
-    "Values & Life Philosophy",
     "Contact",
   ];
 
@@ -40,7 +39,6 @@ const Info = () => {
     "programming-journey": useRef(null),
     "professional-experience-projects": useRef(null),
     "hobbies-inspirations": useRef(null),
-    "values-life-philosophy": useRef(null),
     contact: useRef(null),
   };
 
@@ -114,7 +112,7 @@ const Info = () => {
           }
         });
       },
-      { root: null, threshold: 0.6 }
+      { root: null, threshold: 0.3 }
     );
 
     Object.values(sections).forEach((ref) => {
@@ -289,20 +287,20 @@ const Info = () => {
               <p>My projects:</p>
               <ul>
                 <li>
-                  <FaTruck className="icon big" /> 
+                  <FaTruck className="icon big" />
                   <strong>Logistics Website:</strong> A responsive site with
                   Firebase-powered features, an admin panel, and email
                   subscription functionality.
                 </li>
                 <li>
-                  <FaCamera className="icon big" /> 
+                  <FaCamera className="icon big" />
                   <strong>Photography Portfolio:</strong> A dynamic website with
                   Firebase integration for photo management and category
                   updates, hosted for smooth performance.
                 </li>
               </ul>
               <p>
-                You can explore more of my projects on the {" "}
+                You can explore more of my projects on the{" "}
                 <strong>Work Page</strong>.
               </p>
               <p>
@@ -380,35 +378,43 @@ const Info = () => {
             </Row>
           </div>
 
-          {/* <div
-            id="values-life-philosophy"
-            ref={sections["values-life-philosophy"]}
-            className="info-section"
-          >
-            <h2>Values & Life Philosophy</h2>
-            <p>
-              I believe in taking joy in life’s simple pleasures and embracing
-              every day with gratitude. My guiding principle is:{" "}
-              <em>"Not everything that works for you works for others."</em>{" "}
-              This mindset drives my approach to collaboration, learning, and
-              creating solutions that make a difference.
-            </p>
-          </div> */}
-
           <div id="contact" ref={sections.contact} className="info-section">
-            <h2>Contact</h2>
-            <p>
-              Let’s build something amazing together! Reach me at{" "}
-              <a href="mailto:varsen2302@gmail.com">varsen2302@gmail.com</a> or
-              connect on{" "}
+            <h2 className="contact-header">Contact</h2>
+            <div className="contact-content">
+              {/* Green Dot */}
+              <div style={{ position: "relative", top: 15}}>
+                <div className="radius"></div>
+                <div className="dot"></div>
+              </div>
+              {/* Text */}
+              <p className="contact-text">Exploring new opportunities</p>
+            </div>
+            <div className="contact-links">
+              <a
+                href="mailto:varsen2302@gmail.com"
+                className="contact-item"
+                target="_self"
+                rel="noopener noreferrer"
+              >
+                varsen2302@gmail.com
+              </a>
               <a
                 href="https://www.linkedin.com/in/arsen-valeev-aa92442ba/"
+                className="contact-item"
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                LinkedIn
+                LinkedIn Arsen Valeev
               </a>
-              .
-            </p>
+              <a
+                href="/resume.pdf"
+                className="contact-item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
+            </div>
           </div>
         </Col>
       </Row>
