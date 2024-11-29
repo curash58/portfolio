@@ -154,7 +154,7 @@ const Info = () => {
         <Col xs={12} className="d-md-none mt-3 custom-menu-btn">
           <CustomMenuButton isExpanded={isExpanded} onToggle={handleToggle} />
           <Navbar.Collapse
-            id="mobile-navbar" 
+            id="mobile-navbar"
             className={isExpanded ? "show" : ""}
           >
             <Nav className="flex-column">
@@ -208,60 +208,22 @@ const Info = () => {
               {/* Left Column: Carousel */}
               <Col md={6}>
                 <div className="about-carousel">
-                  <Carousel
-                    controls={false}
-                    indicators={false}
-                  >
-                    <Carousel.Item>
-                      <img
-                        className="d-block w-100 rounded-4"
-                        src="./images/Info/4.jpg"
-                        alt="First slide"
-                      />
-                      <Carousel.Caption>
-                        {/* <p>Image Caption 1</p> */}
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                      <img
-                        className="d-block w-100 rounded-4"
-                        src="./images/Info/5.jpg"
-                        alt="First slide"
-                      />
-                      <Carousel.Caption>
-                        {/* <p>Image Caption 1</p> */}
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                      <img
-                        className="d-block w-100 rounded-4"
-                        src="./images/Info/1.jpg"
-                        alt="First slide"
-                      />
-                      <Carousel.Caption>
-                        {/* <p>Image Caption 1</p> */}
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                      <img
-                        className="d-block w-100 rounded-4"
-                        src="./images/Info/2.jpg"
-                        alt="Second slide"
-                      />
-                      <Carousel.Caption>
-                        {/* <p>Image Caption 2</p> */}
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                      <img
-                        className="d-block w-100 rounded-4"
-                        src="./images/Info/3.jpg"
-                        alt="Third slide"
-                      />
-                      <Carousel.Caption>
-                        {/* <p>Image Caption 3</p> */}
-                      </Carousel.Caption>
-                    </Carousel.Item>
+                  <Carousel controls={false} indicators={false}>
+                    {[
+                      "./images/Info/4.jpg",
+                      "./images/Info/5.jpg",
+                      "./images/Info/1.jpg",
+                      "./images/Info/2.jpg",
+                      "./images/Info/3.jpg",
+                    ].map((src, index) => (
+                      <Carousel.Item key={index}>
+                        <img
+                          className="d-block w-100 rounded-4"
+                          src={src}
+                          alt={`Slide ${index + 1}`}
+                        />
+                      </Carousel.Item>
+                    ))}
                   </Carousel>
                 </div>
               </Col>
