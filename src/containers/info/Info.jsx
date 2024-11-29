@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Container, Row, Col, Nav, Navbar } from "react-bootstrap";
+import { Container, Row, Col, Nav, Navbar, Carousel } from "react-bootstrap";
 import "./Info.css";
 import "./CustomButton.css";
 
@@ -65,7 +65,7 @@ const Info = () => {
   // Scrambling animation logic for the text
   useEffect(() => {
     const originalText = content[activeSection];
-    const scrambleDuration = 3500; // Duration for the animation in milliseconds
+    const scrambleDuration = 1; // Duration for the animation in milliseconds
     const intervalDelay = 50; // Delay between each iteration
     const totalIterations = Math.floor(scrambleDuration / intervalDelay);
 
@@ -113,7 +113,7 @@ const Info = () => {
         });
       },
       { root: null, threshold: 0.6 }
-   );
+    );
 
     Object.values(sections).forEach((ref) => {
       if (ref.current) {
@@ -154,7 +154,7 @@ const Info = () => {
         <Col xs={12} className="d-md-none mt-3 custom-menu-btn">
           <CustomMenuButton isExpanded={isExpanded} onToggle={handleToggle} />
           <Navbar.Collapse
-            id="mobile-navbar"
+            id="mobile-navbar" 
             className={isExpanded ? "show" : ""}
           >
             <Nav className="flex-column">
@@ -204,13 +204,86 @@ const Info = () => {
             className="info-section"
           >
             <h2>About Me</h2>
-            <p>
-              I’m a Computer Programming student at Humber Polytechnic, striving
-              to grow as a developer while seeking a Summer 2025 internship.
-              With a solid foundation in software development and a passion for
-              learning, I’m excited to bring my technical skills and
-              collaborative mindset to innovative projects.
-            </p>
+            <Row>
+              {/* Left Column: Carousel */}
+              <Col md={6}>
+                <div className="about-carousel">
+                  <Carousel
+                    controls={false}
+                    indicators={false}
+                  >
+                    <Carousel.Item>
+                      <img
+                        className="d-block w-100 rounded-4"
+                        src="./images/Info/4.jpg"
+                        alt="First slide"
+                      />
+                      <Carousel.Caption>
+                        {/* <p>Image Caption 1</p> */}
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img
+                        className="d-block w-100 rounded-4"
+                        src="./images/Info/5.jpg"
+                        alt="First slide"
+                      />
+                      <Carousel.Caption>
+                        {/* <p>Image Caption 1</p> */}
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img
+                        className="d-block w-100 rounded-4"
+                        src="./images/Info/1.jpg"
+                        alt="First slide"
+                      />
+                      <Carousel.Caption>
+                        {/* <p>Image Caption 1</p> */}
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img
+                        className="d-block w-100 rounded-4"
+                        src="./images/Info/2.jpg"
+                        alt="Second slide"
+                      />
+                      <Carousel.Caption>
+                        {/* <p>Image Caption 2</p> */}
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img
+                        className="d-block w-100 rounded-4"
+                        src="./images/Info/3.jpg"
+                        alt="Third slide"
+                      />
+                      <Carousel.Caption>
+                        {/* <p>Image Caption 3</p> */}
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                  </Carousel>
+                </div>
+              </Col>
+
+              {/* Right Column: Text */}
+              <Col md={6}>
+                <div className="about-text">
+                  <p>
+                    I am a Computer Programming student at Humber Polytechnic,
+                    actively seeking a Summer 2025 internship where I can apply
+                    my knowledge, contribute to meaningful projects, and grow as
+                    a professional.
+                  </p>
+                  <p>
+                    With a solid foundation in programming and a passion for
+                    problem-solving, I’m ready to bring value to any team,
+                    leveraging both technical skills and a drive for continuous
+                    learning.
+                  </p>
+                </div>
+              </Col>
+            </Row>
           </div>
 
           <div
@@ -264,6 +337,21 @@ const Info = () => {
                 You can explore more of my projects on the{" "}
                 <strong>Work Page</strong>.
               </p>
+              <p>
+                <strong>Technical Stack:</strong>
+              </p>
+              <ul>
+                <li>
+                  <strong>Programming:</strong> JavaScript, Java, C++, React,
+                  Docker, AWS, Spring Boot, Tailwind CSS, HTML, CSS
+                </li>
+                <li>
+                  <strong>Databases:</strong> SQL, Firebase, Appwrite
+                </li>
+                <li>
+                  <strong>Tools:</strong> Git, GitHub, Jenkins, Postman
+                </li>
+              </ul>
             </div>
           </div>
 
