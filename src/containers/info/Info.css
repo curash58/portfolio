@@ -63,7 +63,7 @@
 /* Info Section Styling */
 .info-section {
   min-height: 80vh; /* Adjust to fit content and provide breathing space */
-  padding: 3rem 0; /* Increased padding for better spacing */
+  /* padding: 3rem 0;  */
   background-color: rgba(0, 0, 0, 0.85); /* Darker background for contrast */
   border-radius: 12px; /* Rounded corners for a softer look */
   color: white; /* Ensures text remains readable on dark background */
@@ -132,9 +132,6 @@
   font-size: 2rem;
   font-weight: bold;
   color: white; /* White text */
-}
-#about-me {
-  border-radius: 16px 16px 0 0;
 }
 
 @media (max-width: 768px) {

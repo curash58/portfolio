@@ -65,7 +65,7 @@ const Info = () => {
   // Scrambling animation logic for the text
   useEffect(() => {
     const originalText = content[activeSection];
-    const scrambleDuration = 1; // Duration for the animation in milliseconds
+    const scrambleDuration = 3500; // Duration for the animation in milliseconds
     const intervalDelay = 50; // Delay between each iteration
     const totalIterations = Math.floor(scrambleDuration / intervalDelay);
 
@@ -194,7 +194,7 @@ const Info = () => {
 
           {/* Dynamic Content with Scrambled Animation */}
           <div className="info-dynamic-content">
-            <h1 className="info-dynamic-text">{scrambledText}</h1>
+            <h1 className="info-dynamic-text mb-5">{scrambledText}</h1>
           </div>
 
           {/* Sections for Scrolling */}
@@ -407,7 +407,7 @@ const Info = () => {
                 LinkedIn Arsen Valeev
               </a>
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1LIH-icku4_Mu0FnLBRJjsCGYHw_7IeXp/view?usp=sharing"
                 className="contact-item"
                 target="_blank"
                 rel="noopener noreferrer"
