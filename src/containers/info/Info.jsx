@@ -208,7 +208,7 @@ const Info = () => {
               {/* Left Column: Carousel */}
               <Col md={6}>
                 <div className="about-carousel">
-                  <Carousel controls={false} indicators={false}>
+                  <Carousel controls={true} indicators={false}>
                     {[
                       "./images/Info/4.jpg",
                       "./images/Info/5.JPG",
@@ -334,7 +334,7 @@ const Info = () => {
               {/* Left Column: Carousel */}
               <Col md={6}>
                 <div className="about-carousel">
-                  <Carousel controls={false} indicators={false}>
+                  <Carousel controls={true} indicators={false}>
                     {[
                       "./images/Hobbies/1.jpg",
                       "./images/Hobbies/2.jpg",

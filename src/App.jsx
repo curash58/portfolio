@@ -7,6 +7,7 @@ import {
   Preloader,
   Navbar,
   Footer,
+  Notfound
 } from "./components/";
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Work />} />
               <Route path="/info" element={<Info />} />
+              <Route path="*" element={<Notfound />} />
             </Routes>
             <Footer />
           </Router>

@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Modal, Carousel } from "react-bootstrap";
 import "./Card.css";
 
-const Card = ({ title, description, imageUrls, projectLink }) => {
-  
+const Card = ({ title, description, imageUrls, projectLink, tags }) => {
   const [cardWidth, setCardWidth] = useState("auto");
 
   // State for modal visibility
@@ -85,13 +84,12 @@ const Card = ({ title, description, imageUrls, projectLink }) => {
               {/* Right side: Text */}
               <div
                 className="modal-text-container"
-                style={{ overflowY: "auto", maxHeight: "400px" }}
+                style={{ overflowY: "auto", maxHeight: "400px", maxWidth: 350 }}
               >
                 <h3>
                   {title}{" "}
                   {projectLink && (
                     <a
-                      // добавить сюда иконки глаз анимированных смотрящих на ссылку типо глянь проект или как то так
                       href={projectLink}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -104,6 +102,16 @@ const Card = ({ title, description, imageUrls, projectLink }) => {
                     >
                       (View Project)
                     </a>
+                  )}
+                  {/* Tags inside the modal */}
+                  {tags && (
+                    <div className="modal-tags">
+                      {tags.map((tag, index) => (
+                        <span key={index} className="modal-tag">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   )}
                 </h3>
                 <p>{description}</p>

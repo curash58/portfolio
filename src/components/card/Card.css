@@ -124,10 +124,10 @@
   }
 
   .modal-text-container p {
-    margin-left: 10px;
+    margin: 10px 10px 0 10px;
   }
   .modal-text-container h3 {
-    margin-left: 10px;
+    margin: 0 10px 0 10px;
   }
   .modal-dialog {
     max-width: 1200px;
@@ -135,11 +135,33 @@
   }
 }
 
-
-
 .modal-body .text-center {
   position: sticky;
   bottom: 0;
   padding: 10px;
   z-index: 100;
+}
+
+/* Modal Tags */
+.modal-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem; /* Add spacing above the tags */
+}
+
+.modal-tag {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1); /* Light background */
+  color: rgba(255, 255, 255, 0.8); /* Slightly muted white */
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  border-radius: 12px; /* Rounded edges */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-tag:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Brighter hover background */
+  color: white; /* Bright white text */
 }
