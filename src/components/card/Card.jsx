@@ -3,7 +3,6 @@ import { Modal, Carousel } from "react-bootstrap";
 import "./Card.css";
 
 const Card = ({ title, description, imageUrls, projectLink, tags }) => {
-  const [cardWidth, setCardWidth] = useState("auto");
 
   // State for modal visibility
   const [isOpen, setIsOpen] = useState(false);
@@ -18,28 +17,8 @@ const Card = ({ title, description, imageUrls, projectLink, tags }) => {
     setIsOpen(false);
   };
 
-  useEffect(() => {
-    const updateCardWidth = () => {
-      const targetElement = document.querySelector(
-        ".main-text-wrapper.container"
-      );
-      if (targetElement) {
-        const computedStyle = getComputedStyle(targetElement);
-        const contentWidth = parseFloat(computedStyle.width);
-        setCardWidth(`${(contentWidth - 120) / 2}px`);
-      }
-    };
-
-    updateCardWidth(); // Set initial width on mount
-    window.addEventListener("resize", updateCardWidth);
-
-    return () => {
-      window.removeEventListener("resize", updateCardWidth);
-    };
-  }, []);
-
   return (
-    <div className="card-container" style={{ width: cardWidth }}>
+    <div className="card-container" style={{ maxWidth: `500px` }}>
       {/* Card content */}
       <div className="card-content" onClick={handleOpen}>
         <div className="card-text">
