@@ -9,7 +9,7 @@ const MainText = () => {
       {/* Text content */}
       <div className="main-text-left">
         <h1 className="main-text">
-          Hi, I'm a student seeaking for summer-internship.
+          Hi, I'm a student seeking for summer-internship.
         {/* <span className="highlight">products</span> */}
           {/* Hello there, I'm web-developer, <br />
           and I love what I make. */}

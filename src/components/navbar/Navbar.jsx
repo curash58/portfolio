@@ -9,7 +9,7 @@ const CustomNavbar = () => {
     <Navbar className="custom-navbar" expand="lg" variant="dark">
       <Container className="d-flex align-items-center">
         {/* Left-side brand */}
-        <Navbar.Brand href="#" className="navbar-brand d-none d-lg-block">
+        <Navbar.Brand href="/" className="navbar-brand d-none d-lg-block">
           Arsen Valeev
         </Navbar.Brand>
 

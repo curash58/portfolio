@@ -65,7 +65,7 @@ const Info = () => {
   // Scrambling animation logic for the text
   useEffect(() => {
     const originalText = content[activeSection];
-    const scrambleDuration = 3500; // Duration for the animation in milliseconds
+    const scrambleDuration = 2200; // Duration for the animation in milliseconds
     const intervalDelay = 50; // Delay between each iteration
     const totalIterations = Math.floor(scrambleDuration / intervalDelay);
 
@@ -341,7 +341,6 @@ const Info = () => {
                       "./images/Hobbies/4.jpeg",
                       "./images/Hobbies/5.jpeg",
                       "./images/Hobbies/6.jpeg",
-                      "./images/Hobbies/7.jpeg",
                       "./images/Hobbies/8.jpeg",
                       "./images/Hobbies/9.jpeg",
                     ].map((src, index) => (
