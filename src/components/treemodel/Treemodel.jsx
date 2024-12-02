@@ -19,6 +19,17 @@ const RotatingTree = ({ tree }) => {
 
 const Tree = () => {
   const [tree, setTree] = useState();
+  const [canvasHeight, setCanvasHeight] = useState(window.innerWidth > 768 ? 500 : 400);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setCanvasHeight(window.innerWidth > 768 ? 500 : 400);
+    };
+
+    // Set initial height and add resize listener
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const mtlLoader = new MTLLoader();
@@ -33,28 +44,27 @@ const Tree = () => {
   }, []);
 
   return (
-    <Canvas style={{ height: "500px", width: "100%" }} camera={{ position: [0, 2, 5], fov: 75 }}>
-      {/* Яркое общее освещение */}
-      <ambientLight intensity={1.5} /> {/* Увеличено с 0.8 до 2 */}
-
-      {/* Яркий направленный свет */}
+    <Canvas
+      style={{ height: `${canvasHeight}px`, width: "100%" }}
+      camera={{ position: [0, 2, 5], fov: 75 }}
+    >
+      {/* Bright general lighting */}
+      <ambientLight intensity={1.5} />
+      {/* Bright directional light */}
       <directionalLight
         position={[5, 10, 5]}
-        intensity={2} // Увеличено с 1.5 до 3
+        intensity={2}
         color={"#ffffff"}
       />
-
-      {/* Яркий "небесный" свет */}
+      {/* Bright "sky" light */}
       <hemisphereLight
         skyColor={"#ffffff"}
         groundColor={"#444444"}
-        intensity={2} // Увеличено с 0.6 до 1.5
+        intensity={2}
       />
-
-      {/* Контроллер камеры */}
-      <OrbitControls enableZoom={true} enableRotate={true} enablePan={true} />
-
-      {/* Отрисовка вращающегося объекта */}
+      {/* Camera controller with zoom disabled */}
+      <OrbitControls enableZoom={false} enableRotate={true} enablePan={false} />
+      {/* Render rotating object */}
       {tree && <RotatingTree tree={tree} />}
     </Canvas>
   );

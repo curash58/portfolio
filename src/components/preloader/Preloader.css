@@ -16,7 +16,7 @@
 
 .preloader-text {
   font-size: 3rem;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   animation: slideInRight 1s ease-in-out;
   text-align: center; /* Ensures text is center-aligned */
 }

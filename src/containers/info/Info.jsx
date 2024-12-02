@@ -46,7 +46,7 @@ const Info = () => {
     "For everyone":
       "Hello there, I’m student at Humber Polytechnic with a GPA of 92.3. Outside of academics, you’ll find me enjoying tennis, hiking, or brainstorming ideas.",
     Recruiters:
-      "Excited to contribute to a Summer 2025 internship. With a solid technical foundation and experience in modern tools, I’m eager to grow, collaborate, and learn from experienced mentors.",
+      "Seeking a Summer 2025 internship to apply my technical skills contribute to innovative projects.",
     Engineers:
       "Fluent in /frontend.logic && backend.expertise—built (real_time.apps) + (C++.algorithms) && (Java.structures).",
   };
@@ -210,11 +210,11 @@ const Info = () => {
                 <div className="about-carousel">
                   <Carousel controls={true} indicators={false}>
                     {[
-                      "./images/Info/4.jpg",
-                      "./images/Info/5.JPG",
-                      "./images/Info/1.jpg",
-                      "./images/Info/2.jpg",
-                      "./images/Info/3.JPG",
+                      "./images/Info/1.jpeg",
+                      "./images/Info/2.jpeg",
+                      "./images/Info/3.jpeg",
+                      "./images/Info/4.jpeg",
+                      "./images/Info/5.jpeg",
                     ].map((src, index) => (
                       <Carousel.Item key={index}>
                         <img
@@ -238,10 +238,9 @@ const Info = () => {
                     a professional.
                   </p>
                   <p>
-                    With a solid foundation in programming and a passion for
-                    problem-solving, I’m ready to bring value to any team,
-                    leveraging both technical skills and a drive for continuous
-                    learning.
+                    I’m ready to contribute to impactful projects and grow as a
+                    professional by applying my programming knowledge and
+                    technical skills.
                   </p>
                 </div>
               </Col>
@@ -336,15 +335,15 @@ const Info = () => {
                 <div className="about-carousel">
                   <Carousel controls={true} indicators={false}>
                     {[
-                      "./images/Hobbies/1.jpg",
-                      "./images/Hobbies/2.jpg",
-                      "./images/Hobbies/3.jpg",
-                      "./images/Hobbies/4.jpg",
-                      "./images/Hobbies/5.jpg",
-                      "./images/Hobbies/6.jpg",
-                      "./images/Hobbies/7.jpg",
-                      "./images/Hobbies/8.JPG",
-                      "./images/Hobbies/9.JPG",
+                      "./images/Hobbies/1.jpeg",
+                      "./images/Hobbies/2.jpeg",
+                      "./images/Hobbies/3.jpeg",
+                      "./images/Hobbies/4.jpeg",
+                      "./images/Hobbies/5.jpeg",
+                      "./images/Hobbies/6.jpeg",
+                      "./images/Hobbies/7.jpeg",
+                      "./images/Hobbies/8.jpeg",
+                      "./images/Hobbies/9.jpeg",
                     ].map((src, index) => (
                       <Carousel.Item key={index}>
                         <img
@@ -365,8 +364,7 @@ const Info = () => {
                     Tennis keeps me focused and physically active, while hiking
                     inspires creative solutions and energizes me with nature’s
                     beauty. I also enjoy chess, which hones my strategic
-                    thinking and decision-making skills—valuable traits for a
-                    developer.
+                    thinking and decision-making skills.
                   </p>
                   <p>
                     Outside of programming, I’m currently reading{" "}
@@ -382,7 +380,7 @@ const Info = () => {
             <h2 className="contact-header">Contact</h2>
             <div className="contact-content">
               {/* Green Dot */}
-              <div style={{ position: "relative", top: 15}}>
+              <div style={{ position: "relative", top: 15 }}>
                 <div className="radius"></div>
                 <div className="dot"></div>
               </div>
