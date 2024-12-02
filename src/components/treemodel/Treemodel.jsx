@@ -10,11 +10,11 @@ const RotatingTree = ({ tree }) => {
   // Add rotation inside the Canvas component
   useFrame(() => {
     if (treeRef.current) {
-      treeRef.current.rotation.y += 0.01; // Rotate around Y-axis
+      treeRef.current.rotation.y += 0.0025; // Rotate around Y-axis
     }
   });
 
-  return <primitive ref={treeRef} object={tree} scale={6} />;
+  return <primitive ref={treeRef} object={tree} scale={0.0004} position={[1, -2.5, 0]} />;
 };
 
 const Tree = () => {
@@ -33,11 +33,11 @@ const Tree = () => {
 
   useEffect(() => {
     const mtlLoader = new MTLLoader();
-    mtlLoader.load("/models/Crab.mtl", (materials) => {
+    mtlLoader.load("/models/Trees.mtl", (materials) => {
       materials.preload();
       const objLoader = new OBJLoader();
       objLoader.setMaterials(materials);
-      objLoader.load("/models/Crab.obj", (object) => {
+      objLoader.load("/models/Trees.obj", (object) => {
         setTree(object);
       });
     });
