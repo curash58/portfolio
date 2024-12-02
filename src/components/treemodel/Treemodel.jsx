@@ -14,7 +14,7 @@ const RotatingTree = ({ tree }) => {
     }
   });
 
-  return <primitive ref={treeRef} object={tree} scale={0.1} />;
+  return <primitive ref={treeRef} object={tree} scale={6} />;
 };
 
 const Tree = () => {
@@ -33,11 +33,11 @@ const Tree = () => {
 
   useEffect(() => {
     const mtlLoader = new MTLLoader();
-    mtlLoader.load("/models/Lowpoly_tree_sample.mtl", (materials) => {
+    mtlLoader.load("/models/Crab.mtl", (materials) => {
       materials.preload();
       const objLoader = new OBJLoader();
       objLoader.setMaterials(materials);
-      objLoader.load("/models/Lowpoly_tree_sample.obj", (object) => {
+      objLoader.load("/models/Crab.obj", (object) => {
         setTree(object);
       });
     });
@@ -48,19 +48,17 @@ const Tree = () => {
       style={{ height: `${canvasHeight}px`, width: "100%" }}
       camera={{ position: [0, 2, 5], fov: 75 }}
     >
-      {/* Bright general lighting */}
-      <ambientLight intensity={1.5} />
-      {/* Bright directional light */}
+
+      <ambientLight intensity={0.8} />
       <directionalLight
-        position={[5, 10, 5]}
-        intensity={2}
+        position={[3, 5, 2]}
+        intensity={1.5}
         color={"#ffffff"}
       />
-      {/* Bright "sky" light */}
-      <hemisphereLight
-        skyColor={"#ffffff"}
-        groundColor={"#444444"}
-        intensity={2}
+      <directionalLight
+        position={[0, 5, -5]}
+        intensity={0.5}
+        color={"#ffffff"}
       />
       {/* Camera controller with zoom disabled */}
       <OrbitControls enableZoom={false} enableRotate={true} enablePan={false} />
