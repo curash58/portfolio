@@ -27,7 +27,7 @@
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .main-text-wrapper {
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column-reverse; /* Stack elements vertically */
     padding: 0 15px; /* Reduce padding for smaller screens */
   }
 
