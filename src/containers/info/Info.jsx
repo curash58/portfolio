@@ -412,6 +412,14 @@ const Info = () => {
               >
                 Resume
               </a>
+              <a
+                href="https://github.com/curash58"
+                className="contact-item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
             </div>
           </div>
         </Col>

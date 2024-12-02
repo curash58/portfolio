@@ -43,7 +43,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="footer-icon linkedin"
             >
-              <FaLinkedin />
+              <FaLinkedin size={20} />
             </a>
             <a
               href="mailto:varsen2302@gmail.com"
@@ -51,7 +51,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="footer-icon"
             >
-              <FaEnvelope />
+              <FaEnvelope size={20} />
             </a>
           </Col>
         </Row>

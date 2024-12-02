@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Container } from "react-bootstrap";
-import { FaLinkedin, FaDownload } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Switcher from "./Switcher.jsx"; // Import the Switcher component
 import "./Navbar.css";
 
@@ -29,12 +29,12 @@ const CustomNavbar = () => {
             <FaLinkedin size={20} />
           </a>
           <a
-            href="https://drive.google.com/file/d/1LIH-icku4_Mu0FnLBRJjsCGYHw_7IeXp/view?usp=sharing"
+            href="https://github.com/curash58"
             target="_blank"
             rel="noopener noreferrer"
             className="icon-button"
           >
-            <FaDownload size={20} />
+            <FaGithub size={20} />
           </a>
         </div>
       </Container>
