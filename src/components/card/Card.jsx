@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Modal, Carousel } from "react-bootstrap";
 import "./Card.css";
 
 const Card = ({ title, description, imageUrls, projectLink, tags }) => {
-
   // State for modal visibility
   const [isOpen, setIsOpen] = useState(false);
 
@@ -77,6 +76,7 @@ const Card = ({ title, description, imageUrls, projectLink, tags }) => {
                         fontSize: "0.9rem",
                         marginLeft: "10px",
                         color: "white",
+                        whiteSpace: "nowrap",
                       }}
                     >
                       (View Project)
