@@ -167,6 +167,7 @@
   }
 
   .info-dynamic-text {
+    height: 175px;
     font-size: 1.5rem;
     font-weight: bold;
     color: white; /* White text */
