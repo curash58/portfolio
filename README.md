@@ -36,7 +36,6 @@ Welcome to my personal portfolio website! This platform showcases my work, skill
 - [Three.js](https://threejs.org/): Integrated for 3D elements and animations.
 - [React Router](https://reactrouter.com/): For smooth navigation between pages.
 - CSS with modular components for customized styling.
-- Deployed using [Crabdance](https://crabdance.com/) for free and secure hosting.
 
   
 
