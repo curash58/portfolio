@@ -46,7 +46,7 @@ Welcome to my personal portfolio website! This platform showcases my work, skill
 
 ```bash
 
-git clone https://github.com/username/repository-name.git
+git clone [https://github.com/curash58/portfolio.git](https://github.com/curash58/portfolio.git)
 
 ```
 
