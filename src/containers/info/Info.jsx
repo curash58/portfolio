@@ -404,7 +404,7 @@ const Info = () => {
                 LinkedIn Arsen Valeev
               </a>
               <a
-                href="https://drive.google.com/file/d/1LIH-icku4_Mu0FnLBRJjsCGYHw_7IeXp/view?usp=sharing"
+                href="https://drive.google.com/file/d/18xUv_EJ6OrRM8oAa16LluLa7vGhkAL2j/view?usp=sharing"
                 className="contact-item"
                 target="_blank"
                 rel="noopener noreferrer"
