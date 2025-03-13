@@ -46,7 +46,7 @@ const Info = () => {
     "For everyone":
       "Hello there, I’m student at Humber Polytechnic with a GPA of 92.3. Outside of academics, you’ll find me enjoying tennis, hiking, or brainstorming ideas.",
     Recruiters:
-      "Seeking a Summer 2025 internship to apply my technical skills contribute to innovative projects.",
+      "Looking for a Summer 2025 internship to apply my technical skills contribute to innovative projects.",
     Engineers:
       "Fluent in /frontend.logic && backend.expertise—built (real_time.apps) + (C++.algorithms) && (Java.structures).",
   };

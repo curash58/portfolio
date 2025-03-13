@@ -73,13 +73,13 @@ const Card = ({ title, description, imageUrls, projectLink, tags }) => {
                       rel="noopener noreferrer"
                       className="project-link"
                       style={{
-                        fontSize: "0.9rem",
+                        fontSize: "1.2rem",
                         marginLeft: "10px",
                         color: "white",
                         whiteSpace: "nowrap",
                       }}
                     >
-                      (View Project)
+                      (Direct Link)
                     </a>
                   )}
                   {/* Tags inside the modal */}
@@ -93,7 +93,11 @@ const Card = ({ title, description, imageUrls, projectLink, tags }) => {
                     </div>
                   )}
                 </h3>
-                <p>{description}</p>
+                <div className="modal-description">
+                  {description.map((desc, index) => (
+                    <p key={index}>{desc}</p>
+                  ))}
+                </div>
               </div>
               <div className="text-center mt-3">
                 <button className="btn btn-outline-light" onClick={handleClose}>

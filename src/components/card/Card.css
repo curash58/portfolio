@@ -14,7 +14,7 @@
 
 .card-container:hover {
   transform: scale(1.02); /* Slight hover effect */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* More pronounced hover shadow */
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.6); /* More pronounced hover shadow with white */
 }
 
 /* Card Content */
@@ -35,6 +35,10 @@
 /* Card Text */
 .card-text {
   padding: 16px 0;
+}
+
+.modal-description p{
+  margin-bottom: 10px;
 }
 
 .card-title {
@@ -112,7 +116,6 @@
 
 .modal-dialog {
   max-width: 1200px;
-  margin: 0 100px 0 100px;
 }
 
 @media (max-width: 768px) {
@@ -167,7 +170,7 @@
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.1); /* Light background */
   color: rgba(255, 255, 255, 0.8); /* Slightly muted white */
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   padding: 4px 8px;
   border-radius: 12px; /* Rounded edges */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
