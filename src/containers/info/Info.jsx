@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FaCode, FaDatabase, FaTools, FaTruck, FaCamera } from "react-icons/fa";
+import { FaCode, FaDatabase, FaBrain, FaUsers, FaWindows, FaMicrosoft, FaLaptopCode, FaMobileAlt, FaProjectDiagram, FaCogs } from "react-icons/fa";
 import { Container, Row, Col, Nav, Navbar, Carousel } from "react-bootstrap";
 import "./Info.css";
 import "./CustomButton.css";
@@ -283,7 +283,7 @@ const Info = () => {
               importance of patience, preparation, and adaptability.
             </p>
             <div>
-              <p>My projects:</p>
+              {/* <p>My projects:</p>
               <ul>
                 <li>
                   <FaTruck className="icon big" />
@@ -297,9 +297,9 @@ const Info = () => {
                   Firebase integration for photo management and category
                   updates, hosted for smooth performance.
                 </li>
-              </ul>
+              </ul> */}
               <p>
-                You can explore more of my projects on the{" "}
+                You can explore my projects on the{" "}
                 <strong>Work Page</strong>.
               </p>
               <p>
@@ -307,17 +307,40 @@ const Info = () => {
               </p>
               <ul>
                 <li>
-                  <FaCode className="icon" /> <strong>Programming:</strong>
-                  JavaScript, Java, C++, React, Docker, AWS, Spring Boot,
-                  Tailwind CSS, HTML, CSS
+                  <FaCode className="icon" /> <strong>Programming & Technologies:</strong> 
+                  JavaScript, Java, TypeScript, Python, Java, Dart, C++
                 </li>
                 <li>
-                  <FaDatabase className="icon" /> <strong>Databases:</strong>
-                  SQL, Firebase, Appwrite
+                  <FaLaptopCode className="icon" /> <strong>Web & Backend Development:</strong> 
+                  React, Next.js, Node.js, Express.js, Spring Boot, Django, Tailwind CSS
                 </li>
                 <li>
-                  <FaTools className="icon" /> <strong>Tools:</strong> Git,
-                  GitHub, Jenkins, Postman
+                  <FaMobileAlt className="icon" /> <strong>Mobile Development:</strong> 
+                  Flutter, React Native
+                </li>
+                <li>
+                  <FaBrain className="icon" /> <strong>Data Structures & Algorithms:</strong> 
+                  Problem Solving, SDLC (Software Development Life Cycle), Agile, Visual Paradigm
+                </li>
+                <li>
+                  <FaDatabase className="icon" /> <strong>Data Management & DevOps:</strong> 
+                  SQL, MongoDB, Firebase
+                </li>
+                <li>
+                  <FaCogs className="icon" /> <strong>DevOps & CI/CD:</strong> 
+                  Jenkins, Docker, Kubernetes, Git, GitHub, Postman
+                </li>
+                <li>
+                  <FaUsers className="icon" /> <strong>Soft Skills:</strong> 
+                  Teamwork, Leadership, Time Management, Collaboration, Adaptability
+                </li>
+                <li>
+                  <FaWindows className="icon" /> <strong>Operating Systems:</strong> 
+                  Windows 10, macOS
+                </li>
+                <li>
+                  <FaMicrosoft className="icon" /> <strong>Microsoft Tools:</strong> 
+                  Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Microsoft Power BI, Microsoft Teams
                 </li>
               </ul>
             </div>
