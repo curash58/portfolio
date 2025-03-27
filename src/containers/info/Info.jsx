@@ -3,7 +3,8 @@ import { FaCode, FaDatabase, FaBrain, FaUsers, FaWindows, FaMicrosoft, FaLaptopC
 import { Container, Row, Col, Nav, Navbar, Carousel } from "react-bootstrap";
 import "./Info.css";
 import "./CustomButton.css";
-import { Timeline } from "../../components";
+import { Timeline } from "../../components";import { getDoc, doc } from "firebase/firestore";
+import { db } from "../../firebase";
 
 const CustomMenuButton = ({ isExpanded, onToggle }) => {
   return (
@@ -21,10 +22,12 @@ const CustomMenuButton = ({ isExpanded, onToggle }) => {
 };
 
 const Info = () => {
-  const [isExpanded, setIsExpanded] = useState(false); // State for menu toggle
+  const [isExpanded, setIsExpanded] = useState(false); 
   const [activeSection, setActiveSection] = useState("For everyone");
   const [activeMenu, setActiveMenu] = useState("about-me");
   const [scrambledText, setScrambledText] = useState("");
+  const [resumeUrl, setResumeUrl] = useState("#");
+
 
   const sectionsName = [
     "About Me",
@@ -130,6 +133,23 @@ const Info = () => {
     };
   }, [sections]);
 
+  useEffect(() => {
+    const fetchResumeUrl = async () => {
+      try {
+        const docRef = doc(db, "links", "resume");
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setResumeUrl(docSnap.data().url);
+        } else {
+          console.log("No such document!");
+        }
+      } catch (error) {
+        console.error("Error fetching resume URL:", error);
+      }
+    };
+  
+    fetchResumeUrl();
+  }, []);
   return (
     <Container>
       <Row>
@@ -427,7 +447,7 @@ const Info = () => {
                 LinkedIn Arsen Valeev
               </a>
               <a
-                href="https://drive.google.com/file/d/18xUv_EJ6OrRM8oAa16LluLa7vGhkAL2j/view?usp=sharing"
+                href={resumeUrl}
                 className="contact-item"
                 target="_blank"
                 rel="noopener noreferrer"
